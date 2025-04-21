@@ -1,0 +1,49 @@
+<article class="product-card @if(context.customClass) {@customClass}">
+  <div class="product-card__top">
+    <div class="product-card__img img">
+      <img src="/img/products/@img"
+           alt="Продукт">
+      <span class="img-action">
+        <svg width="30"
+             height="30"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#view"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="product-card__meta">
+      <div class="d-flex flex-column flex-3xl-row ">
+        <h3 class="indent-reset product-card__title"><a href="#">Картина "Чистота и Легкость"</a></h3>
+        <div class="product-card__price">
+          <ins><span>22 930 600 р.</span></ins>
+        </div>
+      </div>
+      <dl class="text-sm product-card__description-list">
+        <div>
+          <dt>Жанр:</dt>
+          <dl>Абстракция Анимализм </dl>
+        </div>
+        <div>
+          <dt>Автор:</dt>
+          <dl>t30gallery</dl>
+        </div>
+        <div>
+          <dt>Размер:</dt>
+          <dl>до 102х80 см</dl>
+        </div>
+      </dl>
+    </div>
+  </div>
+  <div class="product-card__bottom">
+    <button class="btn btn-icon-only @if(context.favorite) {is-favorite}"
+            data-action="add-favourites">
+      <svg width="20"
+           height="20"
+           aria-hidden="true">
+        <use xlink:href="img/sprite.svg#favourites"></use>
+      </svg>
+    </button>
+    <button class="btn btn-light"
+            data-action="add-basket">В корзину</button>
+  </div>
+</article>

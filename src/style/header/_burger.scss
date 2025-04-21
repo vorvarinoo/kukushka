@@ -1,0 +1,52 @@
+.burger {
+  --btn-bg: var(--black-color);
+
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+
+  &:hover {
+    --burger-line-color: var(--black-color);
+    --btn-hover-bg: var(--white-color);
+  }
+
+
+  &--to-cross {
+
+    .burger__line--top {
+      @include anim(cross-top-line, 0.4s);
+    }
+
+    .burger__line--middle {
+      @include anim(cross-middle-line, 0.4s);
+
+    }
+
+    .burger__line--bottom {
+      @include anim(cross-bottom-line, 0.4s);
+
+    }
+
+    .burger__line {
+      width: 36px;
+    }
+  }
+
+  &__line {
+    width: 30px;
+    height: 1px;
+    background-color: var(--burger-line-color, var(--white-color));
+    transform-origin: center;
+
+    transition: background-color .15s ease-in-out;
+
+    &--middle {
+      margin: 6px 0;
+    }
+  }
+}

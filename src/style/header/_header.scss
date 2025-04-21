@@ -1,0 +1,276 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: var(--white-color);
+  transition: border-color var(--duration-default) ease-in-out;
+
+  &__wrap {
+    background-color: var(--white-color);
+  }
+
+  &__wrap--top {
+    position: relative;
+    z-index: 3;
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: var(--gray-70-color);
+    }
+  }
+
+
+  &__inner {
+    @include media-min($xl) {
+      padding: 16px 0 4px;
+    }
+
+    @include media-min($xxl) {
+      padding: 24px 16px;
+    }
+
+    display: flex;
+    align-items: center;
+
+    @include media-min($xl) {
+      display: grid;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    @include media-min($xl) {
+      margin-bottom: 8px;
+    }
+
+    @include media-min($xxl) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+
+    & img {
+      @include media-min($md) {
+        width: 200px;
+        height: 30px;
+      }
+
+      @include media-min($xxl) {
+        width: 264px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: flex-end;
+
+    @include media-min($xl) {
+      justify-content: center;
+    }
+  }
+
+  &__left {
+    padding: 8px 180px;
+    display: none;
+    align-items: center;
+
+    @include media-min($xl) {
+      display: flex;
+    }
+
+    @include media-min($xxl) {
+      padding: 8px 256px;
+    }
+  }
+
+  &__nav {
+    @include media-min($xl) {
+      margin-right: 24px;
+    }
+
+    @include media-min($xxl) {
+      margin-right: 32px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    text-align: center;
+
+    @include media-min($xl) {
+      display: flex;
+    }
+
+    & li {
+      padding: 24px 0;
+      border-top: 1px solid var(--gray-90-color);
+
+      @include media-min($xl) {
+        padding: 0;
+        border-top: none;
+      }
+    }
+
+    & li:last-child {
+      border-bottom: 1px solid var(--gray-90-color);
+
+      @include media-min($xl) {
+        border-bottom: none;
+      }
+    }
+
+    & li:not(:last-child) {
+      @include media-min($xl) {
+        margin-right: 24px;
+      }
+
+      @include media-min($xxl) {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  &__link {
+    text-align: center;
+    color: var(--black);
+    transition: text-decoration-color var(--transition-speed-slow) ease-in-out,
+      color var(--transition-speed-fast) ease-in-out;
+
+    &:hover {
+      --link-line: var(--black-color)
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    @include media-min($xxl) {
+      font-size: 18px;
+    }
+  }
+
+  &__phone {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--gray-90-color);
+    color: var(--black-color);
+
+    @include media-min($xl) {
+      padding: 0;
+      border-bottom: none;
+    }
+
+    @include media-min($xxl) {
+      font-size: 18px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    transform: translateX(15px);
+
+
+    @include media-min($xl) {
+      padding-right: 0;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__btns {
+    margin-right: 8px;
+
+    @include media-min($xxl) {
+      margin-right: 24px;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 8px;
+
+      @include media-min($xxl) {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  &__btn {
+    --btn-color: var(--white-color);
+
+    position: relative;
+
+    &[data-basket] {
+      overflow: hidden;
+
+      &::after {
+        content: attr(data-basket);
+        position: absolute;
+        top: 3px;
+        right: -1px;
+        min-width: 15px;
+        min-height: 15px;
+        background-color: var(--black-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 10px;
+        color: var(--white-color);
+      }
+    }
+  }
+
+
+
+  &__search {
+    position: absolute;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+    transform: translateY(99%);
+
+    transition: transform var(--transition-speed-medium) ease-in-out;
+
+    &[aria-hidden="true"] {
+      transform: translateY(-10%);
+    }
+  }
+
+  &__search-form {
+    display: flex;
+    width: 100%;
+  }
+
+  &__search-input {
+    flex-grow: 1;
+    text-align: center;
+    border: none;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

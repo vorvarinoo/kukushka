@@ -1,0 +1,40 @@
+<section class="site-slider new-works">
+  <div class="container">
+    <div class="site-slider__top">
+      <h2 class="title title-md">Новые работы</h2>
+    </div>
+
+    <div class="swiper site-slider__swiper"
+         id="works-slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-1.png', favorite: 'true'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-2.png'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-1.png', favorite: 'true'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-2.png'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-1.png'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-2.png'})
+        </div>
+      </div>
+
+      <div class="d-none">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <a class="btn btn-light site-slider__btn"
+       href="#">посмотреть все работы</a>
+  </div>
+</section>

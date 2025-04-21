@@ -1,0 +1,49 @@
+body {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: $main-font, Arial, Helvetica, sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration-color: var(--link-line, transparent);
+}
+
+
+.title {
+  @include indent-reset;
+
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--black-color);
+}
+
+.title-lg {
+  font-size: 32px;
+
+  @include media-min($xxl) {
+    font-size: 48px;
+  }
+}
+
+.title-md {
+  font-size: 24px;
+
+  @include media-min($xxl) {
+    font-size: 32px;
+  }
+}
+
+.text-lg {
+  font-size: 16px;
+
+  @include media-min($xxl) {
+    font-size: 18px;
+  }
+}
+
+.text-sm {
+  font-size: 14px;
+}

@@ -1,0 +1,23 @@
+.hero {
+  min-height: 300px;
+  background-image: var(--img-bg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 96px;
+
+  @include media-min($lg) {
+    min-height: 330px;
+    padding-top: 192px;
+  }
+
+  @include media-min($xxl) {
+    padding-top: 256px;
+    min-height: 500px;
+  }
+
+  &__title {
+    color: var(--white-color);
+    text-align: center;
+  }
+}

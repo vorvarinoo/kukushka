@@ -1,0 +1,13 @@
+.new-works {
+  padding: 48px 0;
+
+  @include media-min($xl) {
+    padding: 64px 0;
+    row-gap: 16px;
+  }
+
+  @include media-min($xxl) {
+    padding: 96px 0;
+    row-gap: 24px;
+  }
+}

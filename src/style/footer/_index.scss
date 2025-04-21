@@ -1,0 +1,153 @@
+.footer {
+  position: relative;
+  padding: 160px 0 48px;
+  background-color: var(--black-color);
+
+  @include media-min($md) {
+    padding: 64px 0 48px;
+  }
+
+  @include media-min($xxl) {
+    padding: 96px 0 64px;
+  }
+
+
+  &__bg {
+    --background-light: rgba(0, 0, 0, 0);
+    --background-dark: var(--black-color);
+
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    @include media-min($md) {
+      left: auto;
+      width: auto;
+      height: 100%;
+      right: 0;
+    }
+
+    @include media-min($xl) {
+      width: 515px;
+    }
+
+    @include media-min($xxl) {
+      width: 675px;
+    }
+
+
+    & img {
+      width: 100%;
+
+      @include media-min($lg) {
+        object-fit: cover;
+      }
+
+      // @include media-min($xxl) {
+      //   width: 675px;
+      // }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-image: fill 0 linear-gradient(180deg, var(--background-light) 50%, var(--background-dark) 100%);
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    margin-bottom: 24px;
+
+    @include media-min($xxl) {
+      margin-bottom: 32px;
+    }
+
+    & img {
+      @include media-min($xxl) {
+        width: 265px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    justify-items: center;
+    row-gap: 16px;
+
+    @include media-min($md) {
+      justify-items: flex-start;
+      row-gap: 8px;
+    }
+  }
+
+  &__link {
+    color: var(--white-color);
+  }
+
+  &__office {
+    display: grid;
+    row-gap: 8px;
+    justify-items: center;
+    margin-bottom: 70px;
+
+    @include media-min($md) {
+      justify-items: flex-start;
+    }
+  }
+
+  &__address {
+    color: var(--white-color);
+  }
+
+  &__home,
+  &__work-hour {
+    color: var(--gray-50-color);
+  }
+
+  &__phones {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-min($md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+    }
+  }
+
+  &__phone {
+    color: var(--white-color);
+  }
+
+  &__dev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+
+    @include media-min($md) {
+      justify-content: flex-start;
+    }
+
+    & a {
+      color: var(--white-color);
+      display: block;
+      margin-left: 12px;
+      transition: color var(--transition-speed-medium) ease-in-out;
+
+      &:hover {
+        color: var(--gray-50-color);
+      }
+    }
+  }
+}

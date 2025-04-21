@@ -1,0 +1,167 @@
+<header class="site__header header">
+  <div class="header__wrap--top">
+    <div class="container">
+      <div class="header__wrap">
+        <div class="header__inner">
+          <div class="header__top">
+            <a class="header__logo"
+               href="/">
+              <img src="/img/logo.svg"
+                   alt="Логотип"
+                   width="132"
+                   height="20">
+            </a>
+          </div>
+          <div class="header__bottom">
+            <div class="header__left">
+              <nav class="header__nav">
+                <ul class="header__list list-reset">
+                  <li>
+                    <a class="header__link"
+                       href="">
+                      О галерее
+                    </a>
+                  </li>
+                  <li>
+                    <a class="header__link"
+                       href="">
+                      Художники
+                    </a>
+                  </li>
+                  <li>
+                    <a class="header__link"
+                       href="">
+                      Каталог картин
+                    </a>
+                  </li>
+                  <li>
+                    <a class="header__link"
+                       href="">
+                      Shop
+                    </a>
+                  </li>
+                  <li>
+                    <a class="header__link"
+                       href="">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <a class="header__phone"
+                 href="tel:+79022077720">+7 902 207-77-20</a>
+            </div>
+
+            <div class="header__right">
+              <div class="header__btns">
+                <button class="btn btn-icon-only header__btn"
+                        data-action="open-search">
+                  <svg width="22"
+                       height="22"
+                       aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+                <a class="btn btn-icon-only header__btn"
+                   href="#">
+                  <svg width="22"
+                       height="22"
+                       aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#favourites"></use>
+                  </svg>
+                </a>
+                <a class="btn btn-icon-only header__btn"
+                   href="#"
+                   data-basket="70">
+                  <svg width="22"
+                       height="22"
+                       aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#basket"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="d-none d-xl-block">
+                @include('lang-toggle.html', {
+                'class': 'lang-toggle--hover', name: 'lang-desk'})
+              </div>
+              <button class="btn burger d-xl-none"
+                      type="button"
+                      aria-label="Меню"
+                      data-header-modal="mobile-menu">
+                <span class="burger__line burger__line--top"></span>
+                <span class="burger__line burger__line--middle"></span>
+                <span class="burger__line burger__line--bottom"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__search"
+       aria-hidden="true"
+       data-role="search">
+    <div class="header__search-wrap">
+      <form class="header__search-form">
+        <input class="header__search-input"
+               type="search"
+               placeholder="Поиск"
+               aria-label="Поиск">
+      </form>
+    </div>
+  </div>
+
+  <div id="mobile-menu"
+       class="header-modal"
+       aria-hidden="true">
+    <div class="header-modal__content">
+      <div class="container">
+        <div class="header-modal__wrap">
+          <div class="header-modal__top">
+            <nav class="header__nav">
+              <ul class="list-reset header__list">
+                <li>
+                  <a class="header__link"
+                     href="">
+                    О галерее
+                  </a>
+                </li>
+                <li>
+                  <a class="header__link"
+                     href="">
+                    Художники
+                  </a>
+                </li>
+                <li>
+                  <a class="header__link"
+                     href="">
+                    Каталог картин
+                  </a>
+                </li>
+                <li>
+                  <a class="header__link"
+                     href="">
+                    Shop
+                  </a>
+                </li>
+                <li>
+                  <a class="header__link"
+                     href="">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <a class="header__phone"
+               href="tel:+79022077720">+7 902 207-77-20</a>
+          </div>
+          <div>
+            @include('lang-toggle.html', {name: 'lang-mob'})
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

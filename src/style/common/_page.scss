@@ -1,0 +1,28 @@
+.page-top {
+  padding-top: 170px;
+
+  &__bc {
+    color: var(--gray-70-color);
+
+    & a {
+      color: inherit;
+      transition: color var(--transition-speed-fast) ease-in-out;
+
+      &:hover {
+        color: var(--black-color);
+      }
+    }
+  }
+
+  &__title {
+    padding: 4px 0 32px;
+
+    @include media-min($lg) {
+      padding: 4px 0 48px;
+    }
+
+    @include media-min($xxl) {
+      padding: 4px 0 64px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.pagination {
+  margin-top: 24px;
+  display: flex;
+
+  @include media-min($xl) {
+    margin-top: 40px;
+  }
+
+  &__item {
+    --pg-item-border-color: var(--pg-item-color);
+
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--pg-item-bg, transparent);
+    border: 1px solid var(--pg-item-border-color, var(--gray-90-color));
+    color: var(--pg-item-color, var(--gray-90-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      color var(--transition-speed-medium) ease-in-out,
+      background-color var(--transition-speed-medium) ease-in-out,
+      border-color var(--transition-speed-medium) ease-in-out, ;
+
+    @include media-min($md) {
+      padding: 12px;
+      min-width: 50px;
+      min-height: 50px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__page {
+    &:hover {
+      --pg-item-color: var(--black-color);
+      --pg-item-border-color: var(--beige-color);
+      --pg-item-bg: var(--beige-color);
+    }
+
+    &.is-current {
+      --pg-item-color: var(--white-color);
+      --pg-item-border-color: var(--black-color);
+      --pg-item-bg: var(--black-color);
+    }
+  }
+}
