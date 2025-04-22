@@ -17,7 +17,6 @@
 
 
   &--to-cross {
-
     .burger__line--top {
       @include anim(cross-top-line, 0.4s);
     }

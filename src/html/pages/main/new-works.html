@@ -1,11 +1,44 @@
-<section class="site-slider new-works">
+<section class="site-slider new-works"
+         id="works-slider">
   <div class="container">
     <div class="site-slider__top">
-      <h2 class="title title-md">Новые работы</h2>
-    </div>
+      <h2 class="title title-md site-slider__title">Новые работы</h2>
+      <div class="site-slider__line"></div>
+      <div class="site-slider__controls">
+        <button class="btn-nav prev"
+                data-to-slide="prev"
+                aria-label="Предыдущая страница"
+                title="Предыдущая страница">
+          <svg width="2"
+               height="22"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#slider-line"></use>
+          </svg>
+          <svg width="11"
+               height="30"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#slider-arrow-left"></use>
+          </svg>
+        </button>
 
-    <div class="swiper site-slider__swiper"
-         id="works-slider">
+        <button class="btn-nav next"
+                data-to-slide="next"
+                aria-label="Следующая страница"
+                title="Следующая страница">
+          <svg width="2"
+               height="22"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#slider-line"></use>
+          </svg>
+          <svg width="11"
+               height="30"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#slider-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="swiper site-slider__swiper">
       <div class="swiper-wrapper">
 
         <div class="swiper-slide">

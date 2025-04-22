@@ -14,23 +14,44 @@
 }
 
 .slider-control {
-  color: var(--white-color);
-  background-color: var(--black-color);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  pointer-events: auto;
+  // --btn-slider-gap: 6px;
+
+  // @include btn-reset;
+
+  // color: var(--white-color);
+  // width: 26px;
+  // height: 30px;
+  // pointer-events: auto;
+  // display: inline-flex;
+  // align-items: center;
 
   &.swiper-button-lock {
     display: none;
   }
 
-  & svg {
-    width: 12px;
-    height: 12px;
-  }
+  // &:hover {
+  //   --arrow-prev-offset: -4px;
+  //   --arrow-next-offset: 4px;
+  // }
 
-  @include media-min ($xl) {
-    transition: background-color 0.2s ease-in-out;
-  }
+  // &[data-to-slide="prev"] {
+  //   & svg:last-child {
+  //     margin-left: var(--btn-slider-gap);
+  //     transform: translateX(var(--arrow-prev-offset));
+  //   }
+  // }
+
+  // &[data-to-slide="next"] {
+  //   flex-direction: row-reverse;
+
+  //   & svg:last-child {
+  //     margin-right: var(--btn-slider-gap);
+  //     transform: translateX(var(--arrow-next-offset));
+  //   }
+  // }
+
+  // & svg {
+  //   transition: transform var(--transition-speed-slow) ease-in-out;
+  // }
+
 }

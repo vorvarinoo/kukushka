@@ -1,11 +1,16 @@
 .site-slider {
   &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 32px;
 
     @include media-min($lg) {
       margin-bottom: 16px;
     }
   }
+
+  &__title {}
 
   &__swiper {
     margin-bottom: 32px;
@@ -32,5 +37,18 @@
     @include media-min($xxl) {
       padding: 24px 64px
     }
+  }
+
+  &__line {
+    height: 1px;
+    background-color: var(--gray-90-color);
+    margin: 0 24px;
+    flex-grow: 1;
+  }
+
+  &__controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
   }
 }

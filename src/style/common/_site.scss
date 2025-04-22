@@ -11,6 +11,18 @@
 
   &__content {
     flex-grow: 1;
+
+    &--offset {
+      padding-top: 64px;
+
+      @include media-min($xl) {
+        padding-top: 128px;
+      }
+
+      @include media-min($xxl) {
+        padding-top: 160px;
+      }
+    }
   }
 
   &__footer {

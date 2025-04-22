@@ -5,7 +5,7 @@
         <div class="catalog__product-count">Найдено: 163 товара</div>
         <form class="sort-panel">
           <span class="sort-panel__title">Сортировка:</span>
-          <select>
+          <select class="sort-panel__select">
             <option>
               <div>
                 По умолчанию
@@ -54,19 +54,51 @@
       </div>
 
       <div class="col-12 col-xl-9 ml-auto">
+
         <nav class="pagination">
+          <a class="btn-nav prev"
+             href="#"
+             data-to-page="prev"
+             aria-label="Предыдущая страница"
+             title="Предыдущая страница">
+            <svg width="2"
+                 height="22"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#slider-line"></use>
+            </svg>
+            <svg width="11"
+                 height="30"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#slider-arrow-left"></use>
+            </svg>
+          </a>
+
           <a class="pagination__item pagination__page"
              href="#">1</a>
-          <span class="pagination__item pagination__dots">...</span>
-          <span class="pagination__item pagination__page is-current">4</span>
+          <span class="pagination__item pagination__page is-current">2</span>
           <a class="pagination__item pagination__page"
-             href="#">5</a>
-          <a class="pagination__item pagination__page"
-             href="#">6</a>
+             href="#">3</a>
           <span class="pagination__item pagination__dots">...</span>
           <a class="pagination__item pagination__page"
-             href="#">10</a>
+             href="#">7</a>
+          <a class="btn-nav next"
+             href="#"
+             data-to-page="next"
+             aria-label="Следующая страница"
+             title="Следующая страница">
+            <svg width="2"
+                 height="22"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#slider-line"></use>
+            </svg>
+            <svg width="11"
+                 height="30"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#slider-arrow-right"></use>
+            </svg>
+          </a>
         </nav>
+
       </div>
     </div>
   </div>

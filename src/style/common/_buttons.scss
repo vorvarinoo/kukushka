@@ -119,3 +119,43 @@
     --btn-hover-color: var(--black-color);
   }
 }
+
+
+.btn-nav {
+
+  --btn-slider-gap: 6px;
+
+  @include btn-reset;
+
+  color: var(--white-color);
+  width: 26px;
+  height: 30px;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    --arrow-prev-offset: -4px;
+    --arrow-next-offset: 4px;
+  }
+
+  &.prev {
+    & svg:last-child {
+      margin-left: var(--btn-slider-gap);
+      transform: translateX(var(--arrow-prev-offset));
+    }
+  }
+
+  &.next {
+    flex-direction: row-reverse;
+
+    & svg:last-child {
+      margin-right: var(--btn-slider-gap);
+      transform: translateX(var(--arrow-next-offset));
+    }
+  }
+
+  & svg {
+    transition: transform var(--transition-speed-slow) ease-in-out;
+  }
+}

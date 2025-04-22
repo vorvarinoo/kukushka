@@ -11,7 +11,7 @@
        id="site-top"></div>
   <div class="site__container">
     @include('html/header/index.html')
-    <main class="site__content@if(!context.home){ site__content--offset}">
+    <main class="site__content@if(!context.page){ site__content--offset}">
       @if(context.page !== 'main' && context.page !== '404') {
       @include('html/common/header-page.html', {page: '@title', bc: '@bc', cover: '@cover' })
       }

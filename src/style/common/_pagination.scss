@@ -1,9 +1,14 @@
 .pagination {
   margin-top: 24px;
   display: flex;
+  align-items: center;
 
   @include media-min($xl) {
     margin-top: 40px;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 8px;
   }
 
   &__item {
@@ -27,10 +32,6 @@
       padding: 12px;
       min-width: 50px;
       min-height: 50px;
-    }
-
-    &:not(:last-child) {
-      margin-right: 8px;
     }
   }
 

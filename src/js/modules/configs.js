@@ -8,6 +8,10 @@ const sliderConfig = {
     slidesPerView: 1.4,
     spaceBetween: 20,
     watchSlidesProgress: true,
+    navigation: {
+      prevEl: '#works-slider [data-to-slide="prev"]',
+      nextEl: '#works-slider [data-to-slide="next"]',
+    },
     breakpoints: {
       768: {
         slidesPerView: 2.2,

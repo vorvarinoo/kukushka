@@ -8,7 +8,7 @@ import {
 
 const initSliders = () => {
   initSlider( '.main-first', sliderConfig );
-  initSlider( '#works-slider', sliderConfig.works );
+  initSlider( '#works-slider .swiper', sliderConfig.works );
 };
 
 export {
