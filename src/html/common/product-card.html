@@ -15,7 +15,7 @@
       <div class="d-flex flex-column flex-3xl-row ">
         <h3 class="indent-reset product-card__title"><a href="#">Картина "Чистота и Легкость"</a></h3>
         <div class="product-card__price">
-          <ins><span>22 930 600 р.</span></ins>
+          <ins><span data-price-value>22 930 600 р.</span></ins>
         </div>
       </div>
       <dl class="text-sm product-card__description-list">
@@ -35,15 +35,14 @@
     </div>
   </div>
   <div class="product-card__bottom">
-    <button class="btn btn-icon-only @if(context.favorite) {is-favorite}"
-            data-action="add-favourites">
+    <button class="btn btn-icon-only toggle-favorite @if(context.favorite) {is-favorite}">
       <svg width="20"
            height="20"
            aria-hidden="true">
         <use xlink:href="img/sprite.svg#favourites"></use>
       </svg>
     </button>
-    <button class="btn btn-light"
+    <button class="btn btn-light add-to-basket"
             data-action="add-basket">В корзину</button>
   </div>
 </article>

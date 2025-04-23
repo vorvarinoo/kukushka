@@ -1,0 +1,31 @@
+.description-list {
+  display: grid;
+  row-gap: 10px;
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-90-color);
+  }
+
+  & dt,
+  dd {
+    font-size: 18px;
+  }
+
+  & dt {
+    color: var(--gray-50-color);
+    flex-grow: 1;
+    display: flex;
+
+    @include media-max($md) {
+      max-width: 160px;
+      width: 100%;
+    }
+  }
+
+  & dd {
+    color: var(--black-color);
+    text-align: end;
+  }
+}

@@ -7,26 +7,6 @@
   background-color: var(--white-color);
   transition: border-color var(--duration-default) ease-in-out;
 
-  &__wrap {
-    background-color: var(--white-color);
-  }
-
-  &__wrap--top {
-    position: relative;
-    z-index: 3;
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background-color: var(--gray-70-color);
-    }
-  }
-
-
   &__inner {
     @include media-min($xl) {
       padding: 16px 0 4px;
@@ -60,8 +40,6 @@
   }
 
   &__logo {
-    display: inline-flex;
-
     & img {
       @include media-min($md) {
         width: 200px;
@@ -87,13 +65,10 @@
   }
 
   &__left {
-    padding: 8px 180px;
-    display: none;
+    display: flex;
     align-items: center;
-
-    @include media-min($xl) {
-      display: flex;
-    }
+    padding: 8px 180px;
+    margin: 0 auto;
 
     @include media-min($xxl) {
       padding: 8px 256px;
@@ -184,11 +159,8 @@
   &__right {
     display: flex;
     align-items: center;
-    transform: translateX(15px);
-
 
     @include media-min($xl) {
-      padding-right: 0;
       position: absolute;
       right: 0;
       top: 50%;
@@ -271,5 +243,38 @@
     &:focus-visible {
       outline: none;
     }
+  }
+}
+
+.header-xl {
+  display: none;
+  padding: 16px 0 4px;
+  border-bottom: 1px solid var(--gray-70-color);
+
+  @include media-min($xl) {
+    display: flex;
+  }
+
+  @include media-min($xxl) {
+    padding-bottom: 16px;
+  }
+
+  &__wrap {
+    display: grid;
+  }
+}
+
+.header-sm {
+  @include media-min($xl) {
+    display: none;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    padding-left: 15px;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-70-color);
   }
 }

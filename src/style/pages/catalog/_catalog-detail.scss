@@ -1,0 +1,42 @@
+.catalog-detail {
+
+
+  &__meta {
+    padding: 16px 16px 64px;
+    background-color: var(--beige-color);
+    display: grid;
+    row-gap: 32px;
+
+    @include media-min($lg) {
+      padding: 24px 24px 96px;
+      row-gap: 48px;
+    }
+
+    @include media-min($xxl) {
+      padding: 64px 64px 128px;
+      row-gap: 64px;
+    }
+  }
+
+  &__price {
+    margin-bottom: 24px;
+
+    & > ins {
+      text-decoration: none;
+    }
+  }
+
+  &__actions {
+    display: flex;
+
+    & .add-to-basket {
+      --btn-padding: 18px
+    }
+
+    & .toggle-favorite {
+      --btn-padding: 0 12px;
+      --borde-color: var(--beige-color);
+      --btn-color: transparent;
+    }
+  }
+}

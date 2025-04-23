@@ -76,18 +76,6 @@
     }
   }
 
-  &__logo {
-    display: inline-flex;
-    position: relative;
-
-    & img {
-      @include media-min($xxl) {
-        width: 265px;
-        height: 40px;
-      }
-    }
-  }
-
   &__list {
     display: grid;
     justify-items: center;

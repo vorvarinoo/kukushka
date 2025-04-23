@@ -159,3 +159,21 @@
     transition: transform var(--transition-speed-slow) ease-in-out;
   }
 }
+
+
+.add-to-basket {
+  width: 100%;
+}
+
+.toggle-favorite {
+  --btn-color: var(--beige-color);
+  --btn-bg: var(--beige-color);
+
+  &.is-favorite {
+    --btn-color: var(--black-color);
+  }
+
+  &:active {
+    --btn-hover-bg: var(--beige-color);
+  }
+}

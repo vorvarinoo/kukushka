@@ -1,1 +1,46 @@
-<section class="catalog-detail"></section>
+<section class="catalog-detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        @include('product-gallery.html')
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="catalog-detail__meta">
+
+          @include('parameters.html')
+
+          @include('parameters-active.html')
+
+          <div class="title-lg catalog-detail__price">
+            <ins>
+              <span data-price-value>180 000 р.</span>
+            </ins>
+          </div>
+
+
+          <div class="catalog-detail__actions">
+            <button class="btn btn-dark add-to-basket">
+              В корзину
+            </button>
+
+            <button class="btn btn-icon-only toggle-favorite is-favorite">
+              <svg width="34"
+                   height="34"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#favourites"></use>
+              </svg>
+            </button>
+          </div>
+
+          @include('description-list.html')
+
+          <div class="catalog-detail__text">
+            Интернет галерея Мастера Арт — площадка продажи и покупки предметов искусства сделанных вручную без посредников.
+            Наш интернет магазин картин предлагает широкий ассортимент произведений искусства, созданных талантливыми художниками. Уже много лет мы предоставляем возможность ценителям искусства купить картины, не выходя из дома. Наша онлайн галерея позволяет художникам разместить свои работы и найти благодарных покупателей. Мы гордимся тем, что продажа картин в интернете у нас осуществляется на высоком уровне. Надежная система оплаты и доставки гарантирует безопасность каждой сделки. Эксперты нашей галереи тщательно отбирают произведения, чтобы вы могли наслаждаться только лучшими экземплярами. Если вы ищете место, где можно купить картину, Мастера Арт — ваш идеальный выбор.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

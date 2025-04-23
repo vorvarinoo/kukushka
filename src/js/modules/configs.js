@@ -24,6 +24,29 @@ const sliderConfig = {
         slidesPerView: 4,
       },
     },
+  },
+  productDetail: {
+    slidesPerView: 1,
+    watchSlidesProgress: true,
+    navigation: {
+      prevEl: '#product-gallery [data-to-slide="prev"]',
+      nextEl: '#product-gallery [data-to-slide="next"]',
+    },
+  },
+  productDetailThumbs: {
+    slidesPerView: 5,
+    spaceBetween: 8,
+    watchSlidesProgress: true,
+    freeMode: true,
+
+    breakpoints: {
+      992: {
+        slidesPerView: 3.5
+      },
+      1600: {
+        slidesPerView: 4.5
+      },
+    },
   }
 };
 

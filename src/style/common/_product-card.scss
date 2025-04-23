@@ -89,6 +89,10 @@
     @include media-min($fhd) {
       align-self: flex-start;
     }
+
+    & > ins {
+      text-decoration: none;
+    }
   }
 
   &__description-list {
@@ -119,25 +123,14 @@
     align-items: stretch;
   }
 
-  & [data-action="add-favourites"] {
-    --btn-bg: var(--beige-color);
-    --btn-color: var(--beige-color);
+  & .toggle-favorite {
+    --btn-padding: 0 8px;
     --btn-border-color: var(--gray-90-color);
-
-    &.is-favorite {
-      --btn-color: var(--black-color);
-    }
-
-    &:active {
-      --btn-hover-bg: var(--beige-color);
-    }
   }
 
-  & [data-action="add-basket"] {
+  & .add-to-basket {
+    --btn-padding: 8px;
     --btn-border-color: var(--gray-90-color);
-
-    width: 100%;
-    height: auto;
 
     @include media-max($lg) {
       --btn-bg: var(--black-color);

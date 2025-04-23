@@ -1,0 +1,127 @@
+.cart-product {
+  display: flex;
+  border: 1px solid var(--gray-90-color);
+
+  &__wrap {
+    display: flex;
+    flex-grow: 1;
+    background-color: var(--beige-color);
+  }
+
+  &__info {
+    display: flex;
+    flex-grow: 1;
+    padding: 8px;
+
+    @include media-min($lg) {
+      padding: 24px 16px;
+    }
+
+    @include media-min($xxl) {
+      padding: 32px;
+    }
+  }
+
+  &__img {
+    flex: 1 auto;
+    min-width: 70px;
+    max-width: 130px;
+    padding-bottom: 100px;
+    margin-right: 16px;
+    flex-shrink: 0;
+
+    @include media-min($lg) {
+      max-width: 145px;
+      padding-bottom: 180px;
+      margin-right: 24px;
+    }
+
+    @include media-min($xxl) {
+      margin-right: 32px;
+      padding-bottom: 200px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    flex: 1 auto;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    margin-bottom: 24px;
+
+    @include media-min($lg) {
+      margin-bottom: 62px;
+    }
+
+    @include media-min($xxl) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__params {
+    margin-top: auto;
+    color: var(--gray-50-color);
+    display: grid;
+    row-gap: 2px;
+
+    & > div {
+      display: flex;
+    }
+
+    & dt {
+      margin-right: 4px;
+    }
+  }
+
+  &__amount {
+    padding: 8px;
+
+    @include media-min($lg) {
+      padding: 24px 16px;
+    }
+
+    @include media-min($xxl) {
+      padding: 32px;
+    }
+  }
+
+  &__price {
+    & > ins {
+      text-decoration: none;
+    }
+  }
+
+  &__bottom {
+    border-left: 1px solid var(--gray-90-color);
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+
+    @include media-min($lg) {
+      padding: 0 8px;
+    }
+  }
+
+  &__btn {
+    --btn-padding: 5px;
+    --btn-bg: transparent;
+    --btn-border-color: var(--gray-70-color);
+    --btn-color: var(--gray-50-color);
+
+    &:hover {
+      --btn-hover-bg: transparent;
+      --btn-hover-color: var(--black-color);
+
+      border-color: var(--black-color);
+    }
+
+    &:active {
+      --btn-hover-bg: var(--black-color);
+      --btn-hover-color: var(--white-color);
+    }
+  }
+}

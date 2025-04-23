@@ -1,0 +1,16 @@
+.logo {
+  display: inline-flex;
+
+  & img {
+    object-fit: contain;
+  }
+
+  &--xxl {
+    & img {
+      @include media-min($xxl) {
+        width: 264px;
+        height: 40px;
+      }
+    }
+  }
+}
