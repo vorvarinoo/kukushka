@@ -7,6 +7,7 @@ const sliderConfig = {
   works: {
     slidesPerView: 1.4,
     spaceBetween: 20,
+    freeMode: true,
     watchSlidesProgress: true,
     navigation: {
       prevEl: '#works-slider [data-to-slide="prev"]',
