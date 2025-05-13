@@ -98,8 +98,13 @@ input[type='file'].visually-hidden {
 
 .link,
 .phone {
-  text-decoration-color: var(--link-line-color, transparent);
   color: var(--link-color, var(--black-color));
+  text-decoration-line: underline;
+  text-decoration-color: var(--link-line-color, transparent);
+  /* stylelint-disable */
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-color: var(--link-line-color, transparent);
+  /* stylelint-enable */
   transition: opacity var(--transition-speed-medium) ease-in-out,
     text-decoration var(--transition-speed-medium) ease-in-out;
 
