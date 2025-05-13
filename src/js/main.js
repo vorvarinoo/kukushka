@@ -8,9 +8,6 @@ import {
   initSliders
 } from './modules/slider.js';
 import {
-  initGalleries,
-} from './modules/galleries.js';
-import {
   validateForms
 } from './modules/validate.js';
 import {
@@ -32,7 +29,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     validateForms();
     initModals();
     initSliders();
-    initGalleries();
     initRangeSteppers();
   } );
 } );
