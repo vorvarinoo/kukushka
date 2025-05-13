@@ -7,14 +7,11 @@ import {
   sendData,
 } from './utils.js';
 
-import {
-  simpleModal,
-} from './modal.js';
 
 const justValidateConfig = validateConfig.justValidate;
 
 const isSendOk = () => {
-  simpleModal.open( '#send-ok-modal' );
+  window.open( './page-checkout-success.html' );
 };
 
 const isSendError = ( target ) => {

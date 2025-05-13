@@ -91,6 +91,10 @@
   &__text {
     color: var(--gray-70-color);
     margin-bottom: 20px;
+
+    & > a {
+      --link-color: var(--gray-70-color);
+    }
   }
 
   &__btn {

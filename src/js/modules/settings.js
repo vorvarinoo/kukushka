@@ -1,5 +1,8 @@
+import AcceptCookiePopup from 'accept-cookie-popup';
+
 import {
-  smoothScrollConfig
+  smoothScrollConfig,
+  cookieConfig
 } from './configs.js';
 
 import {
@@ -15,6 +18,7 @@ const initSiteSettings = () => {
   initScrollObserver();
   new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
   [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
+  new AcceptCookiePopup( cookieConfig );
 };
 
 export {

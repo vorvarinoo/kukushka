@@ -1,0 +1,8 @@
+.cookie {
+  --cookie-popup-color: var(--black-color) !important;
+
+  &__btn {
+    color: var(--white-color) !important;
+    background-color: var(--black-color) !important;
+  }
+}

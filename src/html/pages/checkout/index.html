@@ -1,13 +1,2 @@
-<section class="catalog">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-        @include('checkout-form.html')
-      </div>
-
-      <div class="col-12 col-lg-5 offset-lg-1 col-xl-4 offset-xl-1">
-        @include('../cart/cart-checkout.html')
-      </div>
-    </div>
-  </div>
-</section>
+@if(!context.isSuccess) {@include('checkout.html')}
+@if(context.isSuccess) {@include('checkout-success.html')}

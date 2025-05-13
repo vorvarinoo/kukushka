@@ -108,6 +108,12 @@ const requestsConfig = {
   handlerURL: 'https://jsonplaceholder.typicode.com/posts',
 };
 
+const cookieConfig = {
+  siteName: 'Кукушка',
+  showDelay: 1000,
+  popupName: 'cookie',
+};
+
 export {
   sliderConfig,
   smoothScrollConfig,
@@ -115,4 +121,5 @@ export {
   validateConfig,
   observerConfig,
   requestsConfig,
+  cookieConfig,
 };
