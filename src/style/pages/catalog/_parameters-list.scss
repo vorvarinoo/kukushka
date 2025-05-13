@@ -35,10 +35,12 @@
     & a {
       color: var(--black-color);
       text-decoration-line: underline;
-      -webkit-text-decoration-line: underline;
       text-decoration-color: var(--link-line-color, transparent);
-      -webkit-text-decoration-color: var(--link-line-color, transparent);
       transition: text-decoration var(--transition-speed-medium) ease-in-out;
+      /* stylelint-disable */
+      -webkit-text-decoration-line: underline;
+      -webkit-text-decoration-color: var(--link-line-color, transparent);
+      /* stylelint-enable */
 
       &.is-current {
         --link-line-color: var(--black-color)

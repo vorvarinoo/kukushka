@@ -66,12 +66,16 @@
     outline: none;
     appearance: none;
     transition: border-color var(--transition-speed-medium) ease-in-out;
+    /* stylelint-disable */
     -moz-appearance: textfield;
+    /* stylelint-enable */
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       appearance: none;
+      /* stylelint-disable */
       -webkit-appearance: none;
+      /* stylelint-enable */
     }
 
     @include media-min ($xl) {
