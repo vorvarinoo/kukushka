@@ -6,6 +6,10 @@
     display: flex;
     flex-grow: 1;
     background-color: var(--beige-color);
+
+    @include media-max($lg) {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -23,22 +27,22 @@
   }
 
   &__img {
-    flex: 1 auto;
-    min-width: 70px;
-    max-width: 130px;
-    padding-bottom: 100px;
+    flex-basis: 24%;
+    padding-bottom: 35%;
     margin-right: 16px;
     flex-shrink: 0;
+    background-color: var(--white-color);
 
     @include media-min($lg) {
-      max-width: 145px;
-      padding-bottom: 180px;
+      flex-basis: 35%;
+      padding-bottom: 48%;
       margin-right: 24px;
     }
 
-    @include media-min($xxl) {
+    @include media-min($fhd) {
+      flex-basis: 27%;
+      padding-bottom: 37%;
       margin-right: 32px;
-      padding-bottom: 200px;
     }
   }
 
@@ -52,47 +56,104 @@
     margin: 0;
     font-weight: 400;
     margin-bottom: 24px;
-
-    @include media-min($lg) {
-      margin-bottom: 62px;
-    }
-
-    @include media-min($xxl) {
-      margin-bottom: 120px;
-    }
   }
 
-  &__params {
+  &__description-list {
     margin-top: auto;
     color: var(--gray-50-color);
     display: grid;
     row-gap: 2px;
 
-    & > div {
-      display: flex;
-    }
-
-    & dt {
-      margin-right: 4px;
+    & > li {
+      word-break: break-word;
     }
   }
 
   &__amount {
     padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    align-items: center;
+    justify-content: space-between;
 
     @include media-min($lg) {
+      min-width: 220px;
+      align-items: flex-start;
+      flex-direction: column;
       padding: 24px 16px;
     }
 
     @include media-min($xxl) {
+      min-width: 260px;
       padding: 32px;
     }
   }
 
-  &__price {
-    & > ins {
-      text-decoration: none;
+  &__calc {
+    margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    width: 100%;
+    max-width: 120px;
+
+    @include media-min($lg) {
+      max-width: 192px;
     }
+
+  }
+
+  &__calc-btn,
+  &__counter {
+    min-width: 30px;
+    height: 40px;
+    flex: 1 auto;
+
+    @include media-max($lg) {
+      max-width: 40px;
+    }
+
+    @include media-min($fhd) {
+      height: 50px;
+    }
+  }
+
+  &__calc-btn {
+    position: relative;
+    border: 1px solid #c1c1c1;
+    color: #979797;
+
+    &--dec::before,
+    &--inc::before,
+    &--inc::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: currentColor;
+      transform: translate(-50%, -50%);
+    }
+
+    &--dec::before,
+    &--inc::before {
+      width: 10px;
+      height: 2px;
+    }
+
+    &--inc::after {
+      width: 2px;
+      height: 10px;
+    }
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+    line-height: 1.4;
+    text-align: center;
+    color: #2e2e2e;
   }
 
   &__bottom {
@@ -108,20 +169,7 @@
 
   &__btn {
     --btn-padding: 5px;
-    --btn-bg: transparent;
     --btn-border-color: var(--gray-70-color);
     --btn-color: var(--gray-50-color);
-
-    &:hover {
-      --btn-hover-bg: transparent;
-      --btn-hover-color: var(--black-color);
-
-      border-color: var(--black-color);
-    }
-
-    &:active {
-      --btn-hover-bg: var(--black-color);
-      --btn-hover-color: var(--white-color);
-    }
   }
 }

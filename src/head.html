@@ -11,7 +11,10 @@
        id="site-top"></div>
   <div class="site__container">
     @include('html/header/index.html')
-    <main class="site__content@if(!context.page){ site__content--offset}">
-      @if(context.page !== 'main' && context.page !== '404') {
+    <main class="site__content@if(!context.page || context.page === 'about'){ site__content--offset}@if(context.isEmpty){ site__content--flex-column}">
+      @if(context.page !== 'main' && context.page !== '404' && context.page !== 'about') {
       @include('html/common/header-page.html', {page: '@title', bc: '@bc', cover: '@cover' })
+      }
+      @if(context.page === 'about' && context.page !== '404') {
+      @include('html/common/header-page-about.html', {page: '@title', bc: '@bc', cover: '@cover' })
       }

@@ -1,0 +1,39 @@
+.checkout-success {
+  display: grid;
+  justify-items: center;
+
+  &__cont {
+    border: 1px solid var(--gray-90-color);
+    padding: 24px;
+    display: grid;
+    row-gap: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+
+    @include media-min($lg) {
+      max-width: 730px;
+      padding: 32px;
+      row-gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    @include media-min($fhd) {
+      max-width: 1050px;
+      padding: 48px;
+      row-gap: 32px;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__note {
+    color: var(--gray-70-color);
+  }
+
+  &__btn {
+    padding: 16px 64px;
+
+    @include media-min($fhd) {
+      padding: 24px 64px;
+    }
+  }
+}

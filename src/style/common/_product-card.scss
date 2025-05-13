@@ -1,14 +1,17 @@
 .product-card {
   transition: background-color var(--transition-speed-medium) ease-in-out;
 
-  @include media-max($lg) {
-    --opacity--bottom: 1;
+  @include media-hover {
+    &:hover {
+      --opacity-bottom: 1;
 
-    background-color: var(--beige-color);
+      background-color: var(--beige-color);
+    }
   }
 
-  &:hover {
-    --opacity--bottom: 1;
+
+  @include media-hover(none) {
+    --opacity-bottom: 1;
 
     background-color: var(--beige-color);
   }
@@ -32,9 +35,11 @@
       margin-bottom: 24px;
     }
 
-    &:hover {
-      --scale-img: 1.1;
-      --opacity-img-action: 1;
+    @media (hover: hover) and (min-width: $lg) {
+      &:hover {
+        --scale-img: 1.1;
+        --opacity-img-action: 1;
+      }
     }
 
     & img {
@@ -44,102 +49,75 @@
 
   }
 
+  &__btn-img {
+    @include media-max($lg) {
+      pointer-events: none;
+    }
+  }
+
   &__meta {
     position: relative;
 
-    &:hover {
-      --opacity--description-list: 1;
-      --title-color-underline: var(--black-color);
+    @include media-hover {
+      &:hover {
+        --opacity-description-list: 1;
+        --title-color-underline: var(--black-color);
+      }
     }
   }
 
   &__title {
     font-weight: 400;
-    font-size: 16px;
     margin-bottom: 10px;
+    text-decoration: underline solid var(--title-color-underline, transparent);
+    transition: text-decoration-color var(--transition-speed-medium) ease-in-out;
 
     @include media-min($fhd) {
       margin-bottom: 0;
       margin-right: 10px;
     }
-
-    & a {
-      font-size: inherit;
-      color: inherit;
-      text-decoration: underline solid var(--title-color-underline, transparent);
-      transition: text-decoration-color var(--transition-speed-medium) ease-in-out;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-      }
-    }
   }
 
   &__price {
-    flex-shrink: 0;
     align-self: flex-end;
     text-align: end;
 
     @include media-min($fhd) {
       align-self: flex-start;
     }
-
-    & > ins {
-      text-decoration: none;
-    }
   }
 
   &__description-list {
     display: grid;
     row-gap: 2px;
-    opacity: var(--opacity--description-list, .5);
+    opacity: var(--opacity-description-list, .5);
     transition: opacity var(--transition-speed-medium) ease-in-out;
 
-    & > div {
-      display: flex;
-    }
-
-    & dt {
-      flex-shrink: 0;
-      margin-right: 4px;
-    }
-
-    & dl {
-      word-break: break-all;
+    & > li {
+      word-break: break-word;
     }
   }
 
   &__bottom {
-    transition: opacity var(--transition-speed-medium) ease-in-out;
-
-    opacity: var(--opacity--bottom, 0);
+    opacity: var(--opacity-bottom, 0);
     display: flex;
     align-items: stretch;
+    transition: opacity var(--transition-speed-medium) ease-in-out;
   }
 
-  & .toggle-favorite {
+  &__favorite {
     --btn-padding: 0 8px;
     --btn-border-color: var(--gray-90-color);
   }
 
-  & .add-to-basket {
+  &__btn {
     --btn-padding: 8px;
     --btn-border-color: var(--gray-90-color);
 
-    @include media-max($lg) {
+    @include media-hover(none) {
       --btn-bg: var(--black-color);
       --btn-color: var(--white-color);
       --btn-border-color: var(--btn-bg);
-    }
-
-    &:active {
-      --btn-border-color: var(--gray-90-color);
     }
   }
 }

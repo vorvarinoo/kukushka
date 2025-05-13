@@ -1,0 +1,11 @@
+.news {
+  padding-bottom: 64px;
+
+  @include media-min($xl) {
+    padding-bottom: 96px;
+  }
+
+  @include media-min($fhd) {
+    padding-bottom: 128px;
+  }
+}

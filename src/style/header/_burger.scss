@@ -10,9 +10,16 @@
   height: 50px;
 
 
-  &:hover {
+  @include media-hover {
+    &:hover {
+      --burger-line-color: var(--black-color);
+      --btn-hover-bg: var(--white-color);
+    }
+  }
+
+  &:active {
     --burger-line-color: var(--black-color);
-    --btn-hover-bg: var(--white-color);
+    --btn-active-bg: var(--white-color);
   }
 
 
@@ -38,10 +45,9 @@
 
   &__line {
     width: 30px;
-    height: 1px;
+    height: 2px;
     background-color: var(--burger-line-color, var(--white-color));
     transform-origin: center;
-
     transition: background-color .15s ease-in-out;
 
     &--middle {

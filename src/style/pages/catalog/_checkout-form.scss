@@ -1,0 +1,153 @@
+.checkout-form {
+  display: grid;
+  row-gap: 32px;
+
+  @include media-min($lg) {
+    row-gap: 48px;
+  }
+
+  @include media-min($fhd) {
+    row-gap: 64px;
+  }
+}
+
+.checkout-group {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: grid;
+
+  &__title {
+    position: relative;
+    display: block;
+    margin-bottom: 16px;
+    color: var(--gray-70-color);
+    line-height: 1.1;
+
+    @include media-min($fhd) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__note {
+    font-size: 18px;
+    color: var(--gray-70-color);
+    margin-bottom: 16px;
+
+    @include media-min($fhd) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__cont {
+    background-color: var(--beige-color);
+    padding: 16px;
+    display: grid;
+
+
+    @include media-min($lg) {
+      padding: 24px;
+    }
+
+    @include media-min($fhd) {
+      padding: 32px;
+      row-gap: 48px;
+      column-gap: 30px;
+    }
+
+    &--gap {
+      row-gap: 32px;
+
+      @include media-min($fhd) {
+        row-gap: 48px;
+      }
+    }
+
+    &--column-fhd {
+      @include media-min($fhd) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  &__label {
+    color: var(--gray-70-color);
+    justify-self: flex-end;
+    margin-top: 16px;
+
+    @include media-min($fhd) {
+      margin-top: 24px;
+    }
+  }
+
+  &__payment-method {
+    display: grid;
+    justify-items: flex-start;
+    row-gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__payment-logos {
+    display: flex;
+    align-items: center;
+
+    & > div {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.checkout-field {
+  --radio-border-color: var(--beige-color);
+
+  display: flex;
+  flex-direction: column;
+
+  &--row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__title {
+    display: flex;
+    margin-right: 4px;
+
+    &[data-required] {
+      &::after {
+        content: '*';
+        color: var(--red-40-color);
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__input,
+  &__textarea {
+    resize: none;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: var(--gray-70-color);
+    padding: 16px 16px 8px;
+    transition: border-color var(--transition-speed-medium) ease-in-out;
+
+
+    @media (hover: hover) {
+      &:hover {
+        --placeholder-color: var(--black-color);
+      }
+    }
+
+    &:focus-visible {
+      border-color: var(--gray-70-color);
+    }
+
+    &::placeholder {
+      color: var(--placeholder-color, var(--gray-70-color));
+      transition: color var(--transition-speed-medium) ease;
+    }
+  }
+}

@@ -5,12 +5,11 @@ body {
   font-family: $main-font, Arial, Helvetica, sans-serif;
   color: #000000;
   background-color: #ffffff;
-}
 
-a {
-  text-decoration-color: var(--link-line, transparent);
+  @include media-min($fhd) {
+    font-size: 18px;
+  }
 }
-
 
 .title {
   @include indent-reset;
@@ -20,30 +19,34 @@ a {
   color: var(--black-color);
 }
 
-.title-lg {
+.t1 {
   font-size: 32px;
 
-  @include media-min($xxl) {
+  @include media-min($fhd) {
     font-size: 48px;
   }
 }
 
-.title-md {
+.t2 {
   font-size: 24px;
 
-  @include media-min($xxl) {
+  @include media-min($fhd) {
     font-size: 32px;
   }
 }
 
-.text-lg {
+.t-def {
   font-size: 16px;
 
-  @include media-min($xxl) {
+  @include media-min($fhd) {
     font-size: 18px;
   }
 }
 
-.text-sm {
+.t3 {
+  font-size: 16px;
+}
+
+.t4 {
   font-size: 14px;
 }

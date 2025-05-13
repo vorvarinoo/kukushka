@@ -10,8 +10,6 @@
     }
   }
 
-  &__title {}
-
   &__swiper {
     margin-bottom: 32px;
 
@@ -40,15 +38,24 @@
   }
 
   &__line {
+    display: none;
     height: 1px;
     background-color: var(--gray-90-color);
     margin: 0 24px;
     flex-grow: 1;
+
+    @include media-min($lg) {
+      display: block;
+    }
   }
 
   &__controls {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr;
     column-gap: 18px;
+
+    @include media-min($lg) {
+      display: grid;
+    }
   }
 }

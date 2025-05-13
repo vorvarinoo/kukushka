@@ -45,10 +45,6 @@
       @include media-min($lg) {
         object-fit: cover;
       }
-
-      // @include media-min($xxl) {
-      //   width: 675px;
-      // }
     }
 
     &::after {
@@ -88,7 +84,7 @@
   }
 
   &__link {
-    color: var(--white-color);
+    --link-color: var(--white-color);
   }
 
   &__office {
@@ -123,7 +119,7 @@
   }
 
   &__phone {
-    color: var(--white-color);
+    --link-color: var(--white-color)
   }
 
   &__dev {
@@ -142,7 +138,13 @@
       margin-left: 12px;
       transition: color var(--transition-speed-medium) ease-in-out;
 
-      &:hover {
+      @include media-hover {
+        &:hover {
+          color: var(--gray-50-color);
+        }
+      }
+
+      &:active {
         color: var(--gray-50-color);
       }
     }

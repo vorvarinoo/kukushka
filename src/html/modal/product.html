@@ -1,0 +1,35 @@
+<div class="product-modal">
+  <div class="product-modal__left">
+    @include('../pages/catalog-detail/product-gallery-picture.html', {isPicture: true, img: 'img-5', alt: 'Картина “Корабль в порту”'})
+  </div>
+  <div class="product-modal__right">
+    <h2 class="title t2 product-modal__title">Картина “Корабль в порту”</h2>
+    <div class="product-modal__right-parameters">
+      @include('../pages/catalog-detail/parameters.html')
+    </div>
+
+    <div class="product-modal__right-bottom">
+      <div class="t1 catalog-detail__price">
+        <div class="price">
+          <ins>
+            <span data-price-value>180 000 р.</span>
+          </ins>
+        </div>
+      </div>
+
+      <div class="product-modal__actions">
+        <button class="btn btn-light btn-add-cart product-modal__btn is-cart">
+          В корзине
+        </button>
+
+        <button class="btn btn-icon-only btn-favorite product-modal__favorite">
+          <svg width="34"
+               height="34"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#favourites"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

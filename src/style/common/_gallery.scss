@@ -2,7 +2,6 @@
   position: relative;
 
   &__top {
-    padding: 0 22px;
     margin-bottom: 8px;
 
     @include media-min($lg) {
@@ -15,18 +14,25 @@
     }
   }
 
-  &__slider {}
-
   &__slide {
-    padding-bottom: 67%;
+    position: relative;
 
-    @include media-min($lg) {
-      padding-bottom: 70%;
+    @include media-hover {
+      &:hover {
+        --opacity-img-action: 1;
+      }
     }
 
-    @include media-min($xxl) {
-      padding-bottom: 78%;
+    & img {
+      transform: scale(var(--img-slide-scale));
+      transition: var(--transition-speed-slow);
     }
+  }
+
+  &__btn-img {
+    --btn-padding: 10px;
+
+
   }
 
   &__bottom {
@@ -52,6 +58,23 @@
     }
   }
 
+  &__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+
+    @include media-min($lg) {
+      height: 60px;
+    }
+
+    & img {
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+
   &__controls {
     display: none;
     position: absolute;
@@ -64,6 +87,58 @@
 
     @include media-min($lg) {
       display: grid;
+    }
+  }
+}
+
+
+.product-gallery {
+  &__slide {
+    padding-bottom: 61%;
+
+    @include media-min($lg) {
+      padding-bottom: 70%;
+    }
+
+    @include media-min($xxl) {
+      padding-bottom: 78%;
+    }
+
+    &--picture {
+      @include media-hover {
+        &:hover {
+          --img-slide-scale: 1.1;
+        }
+      }
+    }
+  }
+}
+
+
+.artist-gallery {
+  &__slide {
+    padding-bottom: 58%;
+
+    @include media-min($lg) {
+      padding-bottom: 67%;
+    }
+
+    @include media-min($fhd) {
+      padding-bottom: 69%;
+    }
+  }
+}
+
+.news-gallery {
+  &__slide {
+    padding-bottom: 58%;
+
+    @include media-min($lg) {
+      padding-bottom: 67%;
+    }
+
+    @include media-min($fhd) {
+      padding-bottom: 69%;
     }
   }
 }

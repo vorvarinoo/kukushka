@@ -7,23 +7,17 @@
   text-align: center;
   text-decoration: none;
   box-sizing: border-box;
-
   padding: var(--btn-padding);
-
   border-width: var(--btn-border-width, 1px);
   border-style: var(--brn-border-style, solid);
   border-color: var(--btn-border-color, var(--btn-bg));
   border-radius: var(--btn-border-radius);
-
   font-weight: var(--btn-font-weight);
   font-size: var(--btn-font-size);
   text-transform: var(--btn-text-decoration, uppercase);
-
   background-color: var(--btn-bg);
   color: var(--btn-color);
-
   opacity: var(--btn-opacity, 1);
-
   transition:
     color var(--transition-speed-medium) ease-in-out,
     background-color var(--transition-speed-medium) ease-in-out,
@@ -31,10 +25,21 @@
     opacity var(--transition-speed-medium) ease-in-out;
 }
 
-.btn:hover {
-  background-color: var(--btn-hover-bg);
-  color: var(--btn-hover-color);
-  border-color: var(--btn-hover-bg);
+
+
+@media (hover: hover) {
+  .btn:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-color);
+    border-color: var(--btn-hover-border-color, var(--btn-hover-bg));
+  }
+}
+
+.btn:active {
+  background-color: var(--btn-active-bg);
+  color: var(--btn-active-color);
+  border-color: var(--btn-active-border-color, var(--btn-active-bg));
+  opacity: var(--btn-active-opacity);
 }
 
 .btn:focus {
@@ -62,67 +67,43 @@
 .btn-dark {
   --btn-bg: var(--black-color);
   --btn-color: var(--white-color);
-
-  &:hover {
-    --btn-bg: transparent;
-    --btn-color: var(--black-color);
-    // color: bar(--black-color);
-    // background-color: transparent;
-    // border-color: var(--gray-70-color);
-  }
-
-  &:active {
-    opacity: .8;
-  }
+  --btn-hover-bg: transparent;
+  --btn-hover-color: var(--black-color);
+  --btn-hover-border-color: var(--gray-70-color);
+  --btn-active-border-color: var(--gray-70-color);
+  --btn-active-opacity: .8;
 }
 
 .btn-light {
   --btn-border-color: var(--gray-70-color);
-
-  // color: var(--btn-color-default, var(--black-color));
-  // background-color: var(--btn-bg-default, transparent);
-  // text-transform: uppercase;
-  // border: 1px solid var(--btn-border-color-default, var(--gray-70-color));
-
-  &:hover {
-    --btn-hover-bg: var(--black-color);
-    --btn-hover-color: var(--white-color);
-    // color: var(--btn-color-hover, var(--white-color));
-    // background-color: var(--btn-bg-default, var(--black-color));
-    // border-color: var(--btn-border-color-hover, transparent);
-  }
-
-  &:active {
-    --btn-opacity: .8;
-  }
+  --btn-hover-bg: var(--black-color);
+  --btn-hover-color: var(--white-color);
+  --btn-hover-border-color: var(--black-color);
+  --btn-active-bg: var(--black-color);
+  --btn-active-color: var(--white-color);
+  --btn-active-opacity: .8;
 }
 
 .btn-action {
-  &:hover {
-    color: var(--white-color);
-    background-color: var(--black-color);
-  }
+  --btn-active-bg: var(--black-color);
+  --btn-active-color: var(--white-color);
+  --btn-active-border: var(--black-color);
 }
 
 .btn-icon-only {
   --btn-padding: 6px;
   --btn-color: inherit;
   --btn-bg: var(--white-color);
+  --btn-hover-bg: var(--black-color);
+  --btn-hover-color: var(--white-color);
+  --btn-active-bg: var(--white-color);
+  --btn-active-color: var(--black-color);
 
-  &:hover {
-    --btn-hover-bg: var(--black-color);
-    --btn-hover-color: var(--white-color);
-  }
-
-  &:active {
-    --btn-hover-bg: var(--white-color);
-    --btn-hover-color: var(--black-color);
-  }
+  outline: none;
 }
 
 
 .btn-nav {
-
   --btn-slider-gap: 6px;
 
   @include btn-reset;
@@ -134,9 +115,11 @@
   display: inline-flex;
   align-items: center;
 
-  &:hover {
-    --arrow-prev-offset: -4px;
-    --arrow-next-offset: 4px;
+  @include media-hover {
+    &:hover {
+      --arrow-prev-offset: -4px;
+      --arrow-next-offset: 4px;
+    }
   }
 
   &.prev {
@@ -161,19 +144,20 @@
 }
 
 
-.add-to-basket {
+.btn-add-cart {
   width: 100%;
+
+  &:disabled {
+    pointer-events: none;
+  }
 }
 
-.toggle-favorite {
+.btn-favorite {
   --btn-color: var(--beige-color);
   --btn-bg: var(--beige-color);
+  --btn-active-bg: var(--beige-color);
 
   &.is-favorite {
     --btn-color: var(--black-color);
-  }
-
-  &:active {
-    --btn-hover-bg: var(--beige-color);
   }
 }

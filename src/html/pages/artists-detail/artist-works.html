@@ -1,0 +1,73 @@
+<section class="site-slider artist-detail__works"
+         id="works-slider">
+  <div class="container">
+    <div class="site-slider__top">
+      <h2 class="title t2 site-slider__title">Работы художника</h2>
+      <div class="site-slider__line"></div>
+      <div class="site-slider__controls">
+        <button class="btn-nav prev"
+                data-to-slide="prev"
+                aria-label="Предыдущая страница"
+                title="Предыдущая страница">
+          <svg width="2"
+               height="22"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#slider-line"></use>
+          </svg>
+          <svg width="11"
+               height="30"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#slider-arrow-left"></use>
+          </svg>
+        </button>
+
+        <button class="btn-nav next"
+                data-to-slide="next"
+                aria-label="Следующая страница"
+                title="Следующая страница">
+          <svg width="2"
+               height="22"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#slider-line"></use>
+          </svg>
+          <svg width="11"
+               height="30"
+               aria-hidden="true">
+            <use xlink:href="img/sprite.svg#slider-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="slider swiper site-slider__swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-1.png', favorite: 'true'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-2.png'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-1.png', favorite: 'true'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-2.png'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-1.png'})
+        </div>
+        <div class="swiper-slide">
+          @include('../../common/product-card.html', {img: 'img-2.png'})
+        </div>
+      </div>
+
+      <div class="d-none">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <a class="btn btn-light site-slider__btn"
+       href="#">посмотреть все картины</a>
+  </div>
+</section>

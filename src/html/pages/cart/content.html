@@ -1,0 +1,25 @@
+<section class="catalog">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-lg-7">
+        <ul class="list-reset mb-5 mb-lg-0">
+          <li>
+            @include('cart-product.html', {img: 'img-1', title:'Картина Чистота и Легкость', isPicture: true})
+          </li>
+          <li>
+            @include('cart-product.html', {img: 'img-2', title:'Картина Мерч футболка'})
+          </li>
+          <li>
+            @include('cart-product.html', {img: 'img-3', title:'Картина Чистота и Легкость', isPicture: true})
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="col-12 col-lg-5 col-xl-4 offset-xl-1">
+        @include('cart-checkout.html')
+      </div>
+    </div>
+  </div>
+</section>

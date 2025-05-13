@@ -1,0 +1,7 @@
+@include('head.html', {
+title: 'Корзина',
+isEmpty: true,
+bc: '<a href="./page-main.html">Главная</a>&ensp;&bull;&ensp;',
+})
+@include('html/pages/cart/index.html', {isEmpty: true})
+@include('footer.html')

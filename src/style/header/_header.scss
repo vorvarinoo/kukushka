@@ -7,23 +7,6 @@
   background-color: var(--white-color);
   transition: border-color var(--duration-default) ease-in-out;
 
-  &__inner {
-    @include media-min($xl) {
-      padding: 16px 0 4px;
-    }
-
-    @include media-min($xxl) {
-      padding: 16px 0 16px;
-    }
-
-    display: flex;
-    align-items: center;
-
-    @include media-min($xl) {
-      display: grid;
-    }
-  }
-
   &__top {
     display: flex;
     justify-content: center;
@@ -34,22 +17,8 @@
       margin-bottom: 8px;
     }
 
-    @include media-min($xxl) {
+    @include media-min($fhd) {
       margin-bottom: 24px;
-    }
-  }
-
-  &__logo {
-    & img {
-      @include media-min($md) {
-        width: 200px;
-        height: 30px;
-      }
-
-      @include media-min($xxl) {
-        width: 264px;
-        height: 40px;
-      }
     }
   }
 
@@ -70,7 +39,7 @@
     padding: 8px 180px;
     margin: 0 auto;
 
-    @include media-min($xxl) {
+    @include media-min($fhd) {
       padding: 8px 256px;
     }
   }
@@ -80,7 +49,7 @@
       margin-right: 24px;
     }
 
-    @include media-min($xxl) {
+    @include media-min($fhd) {
       margin-right: 32px;
     }
   }
@@ -116,7 +85,7 @@
         margin-right: 24px;
       }
 
-      @include media-min($xxl) {
+      @include media-min($fhd) {
         margin-right: 32px;
       }
     }
@@ -124,35 +93,15 @@
 
   &__link {
     text-align: center;
-    color: var(--black);
-    transition: text-decoration-color var(--transition-speed-slow) ease-in-out,
-      color var(--transition-speed-fast) ease-in-out;
-
-    &:hover {
-      --link-line: var(--black-color)
-    }
-
-    &:active {
-      opacity: 0.6;
-    }
-
-    @include media-min($xxl) {
-      font-size: 18px;
-    }
   }
 
   &__phone {
     padding: 24px 0;
     border-bottom: 1px solid var(--gray-90-color);
-    color: var(--black-color);
 
     @include media-min($xl) {
       padding: 0;
       border-bottom: none;
-    }
-
-    @include media-min($xxl) {
-      font-size: 18px;
     }
   }
 
@@ -171,14 +120,14 @@
   &__btns {
     margin-right: 8px;
 
-    @include media-min($xxl) {
+    @include media-min($fhd) {
       margin-right: 24px;
     }
 
     & > *:not(:last-child) {
       margin-right: 8px;
 
-      @include media-min($xxl) {
+      @include media-min($fhd) {
         margin-right: 24px;
       }
     }
@@ -189,11 +138,11 @@
 
     position: relative;
 
-    &[data-basket] {
+    &[data-cart-value] {
       overflow: hidden;
 
       &::after {
-        content: attr(data-basket);
+        content: attr(data-cart-value);
         position: absolute;
         top: 3px;
         right: -1px;
@@ -209,41 +158,6 @@
       }
     }
   }
-
-
-
-  &__search {
-    position: absolute;
-    background-color: var(--white-color);
-    padding: 8px 16px;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-
-    transform: translateY(99%);
-
-    transition: transform var(--transition-speed-medium) ease-in-out;
-
-    &[aria-hidden="true"] {
-      transform: translateY(-10%);
-    }
-  }
-
-  &__search-form {
-    display: flex;
-    width: 100%;
-  }
-
-  &__search-input {
-    flex-grow: 1;
-    text-align: center;
-    border: none;
-
-    &:focus,
-    &:focus-visible {
-      outline: none;
-    }
-  }
 }
 
 .header-xl {
@@ -255,7 +169,7 @@
     display: flex;
   }
 
-  @include media-min($xxl) {
+  @include media-min($fhd) {
     padding-bottom: 16px;
   }
 

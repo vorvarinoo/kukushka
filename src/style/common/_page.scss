@@ -1,26 +1,66 @@
 .page-top {
+  padding-bottom: 32px;
+
+  @include media-min($lg) {
+    padding-bottom: 48px;
+  }
+
+  @include media-min($fhd) {
+    padding-bottom: 64px;
+  }
+
   &__bc {
     color: var(--gray-70-color);
+    margin-bottom: 4px;
 
     & a {
       color: inherit;
-      transition: color var(--transition-speed-fast) ease-in-out;
+      text-decoration: none;
 
-      &:hover {
+      @include media-hover {
+        &:hover {
+          color: var(--black-color);
+        }
+      }
+
+      &:active {
         color: var(--black-color);
       }
     }
   }
 
   &__title {
-    padding: 4px 0 32px;
+    padding-bottom: 32px;
 
     @include media-min($lg) {
-      padding: 4px 0 48px;
+      padding-bottom: 48px;
     }
 
-    @include media-min($xxl) {
-      padding: 4px 0 64px;
+    @include media-min($fhd) {
+      padding-bottom: 64px;
+    }
+  }
+
+  &__meta {
+    text-align: justify;
+    display: grid;
+    row-gap: 16px;
+
+    & p,
+    & ul {
+      margin: 0;
+    }
+  }
+
+  &__img {
+    padding-bottom: 87%;
+
+    @include media-min($lg) {
+      padding-bottom: 83%;
+    }
+
+    @include media-min($fhd) {
+      padding-bottom: 77%;
     }
   }
 }

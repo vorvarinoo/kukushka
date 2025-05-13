@@ -1,0 +1,78 @@
+.about-cooperation {
+  --dark-bg-color: rgba(0, 0, 0, 0);
+  --light-bg-color: var(--black-color);
+
+  background-color: var(--black-color);
+  position: relative;
+  padding: 192px 0 48px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-image: fill 0 linear-gradient(180deg, var(--dark-bg-color), var(--light-bg-color));
+    background-color: var(--black-color);
+    background-image: url('../img/img-about-cooperation.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 300px;
+
+
+    @include media-min($lg) {
+      width: 36dvw;
+      height: 100%;
+    }
+
+    @include media-min($fhd) {
+      width: 35dvw;
+    }
+  }
+
+  @include media-min($lg) {
+    padding: 96px 0;
+  }
+
+  @include media-min($fhd) {
+    padding: 128px 0;
+  }
+
+  &__title {
+    color: var(--white-color);
+    margin-bottom: 32px;
+
+    @include media-min($fhd) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__meta {
+    color: var(--white-color);
+    line-height: 1.1;
+    margin-bottom: 32px;
+
+    @include media-min($fhd) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__btn {
+    --btn-bg: var(--white-color);
+    --btn-padding: 16px 62px;
+
+    @include media-min($fhd) {
+      --btn-padding: 24px 62px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        --btn-hover-bg: transparent;
+        --btn-hover-color: var(--white-color);
+
+        border-color: var(--white-color);
+      }
+    }
+  }
+}

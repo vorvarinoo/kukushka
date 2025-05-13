@@ -36,12 +36,15 @@
   }
 
   &__page {
-    &:hover {
-      --pg-item-color: var(--black-color);
-      --pg-item-border-color: var(--beige-color);
-      --pg-item-bg: var(--beige-color);
+    @media (hover: hover) {
+      &:hover {
+        --pg-item-color: var(--black-color);
+        --pg-item-border-color: var(--beige-color);
+        --pg-item-bg: var(--beige-color);
+      }
     }
 
+    &:active,
     &.is-current {
       --pg-item-color: var(--white-color);
       --pg-item-border-color: var(--black-color);

@@ -1,0 +1,28 @@
+.news-detail {
+  padding-bottom: 64px;
+
+  @include media-min($xl) {
+    padding-bottom: 96px;
+  }
+
+  @include media-min($fhd) {
+    padding-bottom: 128px;
+  }
+
+  &__meta {
+    row-gap: 16px;
+
+    @include media-min($xl) {
+      row-gap: 24px;
+    }
+
+    @include media-min($fhd) {
+      row-gap: 32px;
+    }
+  }
+
+  &__data {
+    font-size: 18px;
+    color: var(--gray-50-color);
+  }
+}

@@ -25,15 +25,15 @@ const sliderConfig = {
       },
     },
   },
-  productDetail: {
+  detail: {
     slidesPerView: 1,
     watchSlidesProgress: true,
     navigation: {
-      prevEl: '#product-gallery [data-to-slide="prev"]',
-      nextEl: '#product-gallery [data-to-slide="next"]',
+      prevEl: '#detail-gallery [data-to-slide="prev"]',
+      nextEl: '#detail-gallery [data-to-slide="next"]',
     },
   },
-  productDetailThumbs: {
+  detailThumbs: {
     slidesPerView: 5,
     spaceBetween: 8,
     watchSlidesProgress: true,
@@ -47,7 +47,15 @@ const sliderConfig = {
         slidesPerView: 4.5
       },
     },
-  }
+  },
+  about: {
+    slidesPerView: 1,
+    watchSlidesProgress: true,
+    navigation: {
+      prevEl: '#about [data-to-slide="prev"]',
+      nextEl: '#about [data-to-slide="next"]',
+    },
+  },
 };
 
 const smoothScrollConfig = {
@@ -67,10 +75,9 @@ const validateConfig = {
   justValidate: {
     errorFieldCssClass: 'is-invalid',
     errorLabelStyle: {
-      color: 'var(--error)',
-      marginTop: '6px',
+      color: 'var(--error-color)',
       fontSize: '12px',
-      textAlign: 'left',
+      textAlign: 'right',
     },
     errorFormClass: 'shaked',
     errorTimeout: 1500,

@@ -1,0 +1,41 @@
+.catalog-card {
+  position: relative;
+  padding: 16px;
+  transition: background-color var(--transition-speed-medium) ease-in-out;
+
+  @include media-hover {
+    &:hover {
+      background-color: var(--beige-color);
+    }
+  }
+
+  @include media-hover(none) {
+    background-color: var(--beige-color);
+  }
+
+  @include media-min($lg) {
+    background-color: transparent;
+    padding: 24px;
+  }
+
+  &__img {
+    padding-bottom: 55%;
+    margin-bottom: 12px;
+
+    @include media-min($md) {
+      padding-bottom: 83%;
+    }
+
+    & img {
+      @include media-max($md) {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    text-align: center;
+  }
+}

@@ -1,0 +1,47 @@
+.product-modal {
+  display: flex;
+
+  &__left,
+  &__right {
+    max-width: 540px;
+
+    @include media-min($fhd) {
+      max-width: 780px;
+    }
+  }
+
+  &__left {
+    margin-right: 30px;
+  }
+
+  &__right {
+    background-color: var(--beige-color);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__right-parameters {
+    margin-bottom: auto;
+  }
+
+  &__right-bottom {
+    margin-top: 32px;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__btn {
+    padding: 16px;
+  }
+
+  &__favorite {
+    --btn-padding: 12px;
+  }
+}

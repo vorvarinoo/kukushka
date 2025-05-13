@@ -5,20 +5,22 @@
   color: #000000;
   background-color: #FFFFFF;
   min-width: 360px;
-  max-width: 768px;
+  max-width: 1590px;
 
   &__close {
     @include btn-reset;
 
+    --btn-color: var(--black-color);
+    --btn-hover-color: var(--white-color);
+
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    color: #000000;
+    width: 58px;
+    height: 58px;
   }
 
   @include media-max(calc(var(--min-site-width) - 1px)) {

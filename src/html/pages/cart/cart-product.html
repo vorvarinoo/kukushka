@@ -1,54 +1,62 @@
 <article class="cart-product">
   <div class="cart-product__wrap">
     <div class="cart-product__info">
-      <div class="img-cover cart-product__img">
-        <img src="/img/cart/img-1.png"
-             alt="Товар">
+      <div class="img-fit cart-product__img">
+        <img src="./img/cart/@img.png"
+             alt="@title">
       </div>
       <div class="cart-product__meta">
-        <h3 class="text-lg cart-product__title">
-          Картина "Чистота и Легкость"
+        <h3 class="t-def cart-product__title">
+          @title
         </h3>
 
-        <dl class="cart-product__params">
-          <div>
-            <dt>Жанр:</dt>
-            <dd>АбстракцияАнимализм</dd>
-          </div>
+        <ul class="list-reset t4 cart-product__description-list">
+          @if(context.isPicture){
+          <li>Жанр: АбстракцияАнимализм</li>
+          <li>Автор: t30gallery</li>
+          <li>Размер: до 102х80 см</li>
+          }
 
-          <div>
-            <dt>Автор:</dt>
-            <dd>t30gallery</dd>
-          </div>
-
-          <div>
-            <dt>Размер:</dt>
-            <dd>до 102х80 см</dd>
-          </div>
-        </dl>
+          @if(!context.isPicture){
+          <li>Цвет: Чёрный</li>
+          <li>Размер: 46 - 48 S</li>
+          }
+        </ul>
       </div>
     </div>
     <div class="cart-product__amount">
-      <div class="cart-product__price">
+      <div class="t2 price mr-3 mr-lg-0">
         <ins>
-          <span data-price-value>10 193 600 р.</span>
+          <span data-price-value>10 193 600</span>
         </ins>
       </div>
 
-      <div class="cart-product__stepper">
-
+      @if(!context.isPicture){
+      <div class="cart-product__calc"
+           data-stepper-calc>
+        <button class="btn btn-action cart-product__calc-btn cart-product__calc-btn--dec"
+                type="button"
+                data-decrement></button>
+        <span class="t3 cart-product__counter">1</span>
+        <button class="btn btn-action cart-product__calc-btn cart-product__calc-btn--inc"
+                type="button"
+                data-increment></button>
       </div>
+      }
+
     </div>
   </div>
   <div class="cart-product__bottom">
-    <button class="btn btn-icon-only cart-product__btn"
-            title="Удалить товар"
-            aria-label="Удалить товар">
+    <a href="#"
+       class="btn btn-action cart-product__btn"
+       title="Удалить товар"
+       aria-label="Удалить товар"
+       data-hystmodal="#delete-product-modal">
       <svg width="15"
            height="15"
            aria-hidden="true">
         <use xlink:href="img/sprite.svg#cross"></use>
       </svg>
-    </button>
+    </a>
   </div>
 </article>

@@ -1,0 +1,165 @@
+<form class="checkout-form"
+      data-validate
+      id="checkout">
+  <fieldset class="checkout-group">
+    <legend class="t2 checkout-group__title">1. Введите личные данные</legend>
+    <div class="checkout-group__cont checkout-group__cont--gap">
+      <label class="checkout-field">
+        <span class="checkout-field__title"
+              data-required>
+          Ф.И.О.:
+        </span>
+        <input class="checkout-field__input"
+               type="text"
+               name="Имя"
+               placeholder="Введите ваше Имя"
+               data-validate="name"
+               required>
+      </label>
+
+      <label class="checkout-field">
+        <span class="checkout-field__title"
+              data-required>
+          E-Mail:
+        </span>
+        <input class="checkout-field__input"
+               type="email"
+               name="Почта"
+               placeholder="Введите ваш Email"
+               data-validate="email"
+               required>
+      </label>
+
+      <label class="checkout-field">
+        <span class="checkout-field__title"
+              data-required>
+          Телефон:
+        </span>
+        <input class="checkout-field__input"
+               type="tel"
+               placeholder="+7(___)___-__-__"
+               name="Телефон"
+               placeholder="Введите ваше Имя"
+               data-validate="phone"
+               required>
+      </label>
+
+      <label class="checkout-field">
+        <span class="checkout-field__title">
+          Комментарии к заказу:
+        </span>
+        <textarea class="checkout-field__textarea"
+                  rows="6"
+                  name="Комментарий"
+                  placeholder="Введите ваш комментарий"
+                  spellcheck="false"></textarea>
+      </label>
+    </div>
+    <div class="t4 checkout-group__label">* Обязательные поля</div>
+  </fieldset>
+
+  <fieldset class="checkout-group">
+    <legend class="t2 checkout-group__title">2. Адрес доставки</legend>
+    <p class="indent-reset checkout-group__note">
+      *Условия доставки обсуждаются индивидуально, после заказа наш менеджер свяжется с вами для уточнения подробностей
+    </p>
+    <div class="checkout-group__cont checkout-group__cont--gap checkout-group__cont--column-fhd">
+
+      <label class="checkout-field">
+        <span class="checkout-field__title"
+              data-required>
+          Страна
+        </span>
+        <input class="checkout-field__input"
+               type="text"
+               name="Страна"
+               placeholder="Введите ваше Имя"
+               data-validate="email"
+               required>
+      </label>
+
+      <label class="checkout-field">
+        <span class="checkout-field__title"
+              data-required>
+          Город
+        </span>
+        <input class="checkout-field__input"
+               type="text"
+               name="Город"
+               placeholder="Введите ваше Имя"
+               data-validate="email"
+               required>
+      </label>
+
+      <label class="checkout-field">
+        <span class="checkout-field__title"
+              data-required>
+          Улица
+        </span>
+        <input class="checkout-field__input"
+               type="text"
+               name="Улица"
+               placeholder="Введите ваше Имя"
+               data-validate="email"
+               required>
+      </label>
+
+      <label class="checkout-field">
+        <span class="checkout-field__title">
+          Дом
+        </span>
+        <input class="checkout-field__input"
+               type="text"
+               name="Дом"
+               placeholder="Введите ваше Имя">
+      </label>
+
+    </div>
+
+    <div class="t4 checkout-group__label">* Обязательные поля</div>
+  </fieldset>
+
+  <fieldset class="checkout-group">
+    <legend class="t2 checkout-group__title">3. Выберите способ оплаты</legend>
+    <div class="checkout-group__cont">
+      <div class="checkout-group__payment-method">
+        <label class="checkout-field checkout-field--row form-radio">
+          <input type="radio"
+                 name="payment-method">
+          <span>Онлайн платеж по карте</span>
+        </label>
+
+        <label class="checkout-field checkout-field--row form-radio">
+          <input type="radio"
+                 name="payment-method">
+          <span>Оплата наличными или картой курьеру</span>
+        </label>
+
+        <label class="checkout-field checkout-field--row form-radio">
+          <input type="radio"
+                 name="payment-method">
+          <span>Оплата наличными или картой при самовывозе</span>
+        </label>
+      </div>
+
+      <div class="checkout-group__payment-logos">
+        <div>
+          <img src="./img/mir.png"
+               aria-hidden="true">
+        </div>
+        <div>
+          <img src="./img/visa.png"
+               aria-hidden="true">
+        </div>
+        <div>
+          <img src="./img/mastercard.png"
+               aria-hidden="true">
+        </div>
+        <div>
+          <img src="./img/maestra.png"
+               aria-hidden="true">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>

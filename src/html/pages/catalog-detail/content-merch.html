@@ -1,0 +1,45 @@
+<section class="catalog-detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        @include('product-gallery-merch.html', {img: 'img-2', alt: 'Мерч футболка'})
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="catalog-detail__meta catalog-detail__meta--pb-lg">
+
+          @include('parameters-active.html')
+
+          <div>
+            <div class="t1 price mb-4">
+              <ins>
+                <span data-price-value>180 000</span>
+              </ins>
+            </div>
+
+
+            <div class="catalog-detail__actions">
+              <button class="btn btn-dark btn-add-cart catalog-detail__btn">
+                В корзину
+              </button>
+
+              <button class="btn btn-icon-only btn-favorite catalog-detail__favorite">
+                <svg width="34"
+                     height="34"
+                     aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#favourites"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          @include('description-list.html')
+
+          <div class="catalog-detail__text">
+            Данный товар является частью проекта Кукушка - специального раздела нашего каталога, где мы собрали экологичные, этичные, инклюзивные и благотворительные товары.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

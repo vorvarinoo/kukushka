@@ -1,0 +1,6 @@
+@include('head.html', {
+title: 'Мерч футболка',
+bc: '<a href="./page-main.html">Главная</a>&ensp;&bull;&ensp;<a href="./page-catalog.html">Каталог</a>&ensp;&bull;&ensp;<a href="./page-catalog-elements.html">Каталог картин</a>&ensp;&bull;&ensp;',
+})
+@include('html/pages/catalog-detail/index.html', {product: 'merch'})
+@include('footer.html')

@@ -36,11 +36,10 @@ input[type='file'].visually-hidden {
 }
 
 
-.img {
+.img-fit {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 100%;
   overflow: hidden;
 
   & img {
@@ -51,40 +50,34 @@ input[type='file'].visually-hidden {
     height: 100%;
     object-fit: contain;
   }
-}
 
-.img-cover {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  overflow: hidden;
-
-  & img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  &--cover {
+    & img {
+      object-fit: cover;
+    }
   }
 }
 
 .img-action {
+  pointer-events: none;
   display: flex;
   background-color: rgba(0, 0, 0, .3);
   position: absolute;
-  padding: 6px;
+  padding: var(--btn-padding);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
   opacity: var(--opacity-img-action, 0);
-
+  color: inherit;
   transition: background-color var(--transition-speed-medium) ease-in-out, opacity var(--transition-speed-slow) ease-in-out;
 
-  &:hover {
-    background-color: var(--black-color);
+  @include media-hover {
+    pointer-events: all;
+
+    &:hover {
+      background-color: var(--black-color);
+    }
   }
 }
 
@@ -100,5 +93,58 @@ input[type='file'].visually-hidden {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+.link,
+.phone {
+  text-decoration-color: var(--link-line-color, transparent);
+  color: var(--link-color, var(--black-color));
+  transition: opacity var(--transition-speed-medium) ease-in-out,
+    text-decoration var(--transition-speed-medium) ease-in-out;
+
+  @include media-hover {
+    &:hover {
+      --link-line-color: var(--link-color, var(--black-color));
+    }
+  }
+
+  &:active {
+    --link-line-color: var(--link-color, var(--black-color));
+
+    opacity: .6;
+  }
+}
+
+
+.social-link {
+  color: var(--black-color);
+  display: inline-flex;
+  align-items: center;
+
+  @include media-hover {
+    &:hover {
+      --svg-opacity: 1;
+    }
+  }
+
+  &:active {
+    --svg-opacity: 1;
+  }
+
+  & svg {
+    opacity: var(--svg-opacity, .2);
+    margin-right: 4px;
+    transition: opacity var(--transition-speed-slow) ease-in-out;
+  }
+}
+
+
+.price {
+  flex-shrink: 0;
+
+  & > ins {
+    color: var(--black-color);
+    text-decoration: none;
   }
 }

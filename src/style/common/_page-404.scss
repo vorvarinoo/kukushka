@@ -1,0 +1,84 @@
+.page-404 {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  padding-bottom: 48px;
+
+  @include media-min($lg) {
+    padding-bottom: 0;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  &__img,
+  &__descr {
+    @include media-min($lg) {
+      flex-basis: 50%;
+      height: 100%;
+    }
+  }
+
+  &__img {
+    margin-bottom: 64px;
+    background-color: #F9F2EC;
+
+    @include media-max($lg) {
+      flex-basis: 68dvh;
+    }
+
+    @include media-min($lg) {
+      margin-bottom: 0;
+      height: 100%;
+    }
+
+    & img {
+      @include media-max($lg) {
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__descr {
+    display: flex;
+    align-items: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__wrap {
+    max-width: 344px;
+
+    @include media-min($lg) {
+      transform: translate(-50px, -40%);
+    }
+
+    @include media-min($fhd) {
+      max-width: 516px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+
+    @include media-min($lg) {
+      margin-bottom: 48px;
+    }
+
+    @include media-min($fhd) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__btn {
+    padding: 16px 64px;
+
+    @include media-min($fhd) {
+      padding: 24px 64px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.artist-detail {
+  &__cont {
+    padding-bottom: 48px;
+
+    @include media-min($fhd) {
+      padding-bottom: 64px;
+    }
+  }
+
+  &__works {
+    padding: 48px 0 64px;
+
+    @include media-min($lg) {
+      padding: 48px 0 96px;
+    }
+
+    @include media-min($fhd) {
+      padding: 64px 0 128px;
+    }
+  }
+}

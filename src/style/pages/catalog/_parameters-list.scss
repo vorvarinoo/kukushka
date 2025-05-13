@@ -1,0 +1,55 @@
+.parameters-list {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  max-width: 510px;
+
+  &__column {
+    display: grid;
+    row-gap: 32px;
+    padding-left: 12px;
+    border-left: 1px solid var(--gray-90-color);
+  }
+
+  & dt {
+    font-size: 14px;
+    color: var(--gray-70-color);
+    margin-bottom: 2px;
+  }
+
+  & dd {
+    font-size: 18px;
+    color: var(--black-color);
+  }
+
+  &--active {
+    & dt {
+      margin-bottom: 16px;
+    }
+
+    & dd:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    & a {
+      color: var(--black-color);
+      text-decoration-line: underline;
+      -webkit-text-decoration-line: underline;
+      text-decoration-color: var(--link-line-color, transparent);
+      -webkit-text-decoration-color: var(--link-line-color, transparent);
+      transition: text-decoration var(--transition-speed-medium) ease-in-out;
+
+      &.is-current {
+        --link-line-color: var(--black-color)
+      }
+
+      @include media-hover {
+        &:hover {
+          --link-line-color: var(--black-color)
+        }
+      }
+    }
+  }
+
+}

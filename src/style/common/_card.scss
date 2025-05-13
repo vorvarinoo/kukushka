@@ -1,0 +1,83 @@
+.card {
+  position: relative;
+  transition: background-color var(--transition-speed-medium) ease-in-out;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--beige-color);
+    }
+  }
+
+  @media (hover: none) {
+    background-color: var(--beige-color);
+  }
+
+  @include media-max($md) {
+    display: flex;
+  }
+
+  @include media-min($md) {
+    padding: 16px;
+  }
+
+  @include media-min($fhd) {
+    padding: 24px;
+  }
+
+
+  &__head {
+    @include media-max($md) {
+      flex-basis: 40%;
+    }
+
+    @include media-min($md) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__img {
+    padding-bottom: 100%;
+
+    @include media-min($lg) {
+      padding-bottom: 81%;
+    }
+
+    @include media-min($fhd) {
+      padding-bottom: 83%;
+    }
+  }
+
+  &__detail {
+    @include media-max($md) {
+      padding: 16px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+
+    & a {
+      font-size: inherit;
+      color: inherit;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+
+  &__date {
+    color: var(--gray-50-color);
+    margin-top: 8px;
+
+    @include media-min($lg) {
+      margin-top: 12px;
+    }
+  }
+}

@@ -1,6 +1,34 @@
-@include('head.html', {
-title: 'Новости',
-bc: '<a href="page-main.html">Главная</a>&ensp;&bull;&ensp;',
-})
-@include('html/pages/news/index.html')
-@include('footer.html')
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/head/index.html')
+  <title>Страница не найдена</title>
+</head>
+
+<body class="indent-reset site">
+  <div inert=""
+       id="site-top"></div>
+  <div class="site__container">
+    <main class="site__content page-404">
+      <div class="page-404__img img-fit">
+        <img src="./img/img-404.png">
+      </div>
+      <div class="page-404__descr">
+        <div class="container page-404__container">
+          <div class="page-404__wrap">
+            <h1 class="title t1 page-404__title">
+              <span>Ошибка...</span>
+              <span>Страница не найдена</span>
+            </h1>
+            <a class="btn btn-dark page-404__btn"
+               href="/page-main.html">Вернитесь на главную</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  @include('html/service/scripts.html')
+</body>
+
+</html>

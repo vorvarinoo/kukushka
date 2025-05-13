@@ -1,5 +1,4 @@
 .sort-panel {
-
   @include media-min($md) {
     display: flex;
     align-items: center;
@@ -25,8 +24,9 @@
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg width='17' height='7' viewBox='0 0 17 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8.49972 6L16 1' stroke='%23B2B2B2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
     background-repeat: no-repeat;
-
     background-position: right 8px center;
+    background-color: transparent;
+    color: var(--black-color);
 
     &::-ms-expand {
       display: none;

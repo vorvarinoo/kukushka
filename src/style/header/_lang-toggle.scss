@@ -9,52 +9,49 @@
     background-color var(--transition-speed-slow) ease-in-out,
     color var(--transition-speed-slow) ease-in-out;
 
-  &--hover {
-    --label-padding: ;
+  &.is-eu {
+    --eu: 1fr;
 
-    padding: 0;
-    background-color: transparent;
-    grid-template-columns: var(--fr1, 0fr) var(--fr2, 0fr);
-    color: var(--color-text, var(--black-color));
-
-    &:has(div:first-child input:checked) {
-      --fr1: 1fr;
-    }
-
-    &:has(div:last-child input:checked) {
-      --fr2: 1fr;
-    }
-  }
-
-  &__item {
-    overflow: hidden;
-  }
-
-  &__label {
-    cursor: pointer;
-    display: flex;
-    justify-items: center;
-    padding: 9px 8px 6px;
-
-    & span {
-      opacity: 0.6;
-      transition: opacity var(--transition-speed-slow) ease-in-out;
-    }
-  }
-
-
-  &__input {
-    &:checked + span {
+    & .language-eu {
       opacity: 1;
     }
   }
 
+  &.is-ru {
+    --ru: 1fr;
+
+    & .language-ru {
+      opacity: 1;
+    }
+  }
+
+  &--hover {
+    height: auto;
+    padding: 0;
+    background-color: transparent;
+    grid-template-columns: var(--eu, 0fr) var(--ru, 0fr);
+    color: var(--color-text, var(--black-color));
+  }
+
+  &__item {
+    overflow: hidden;
+    padding: 9px 8px 6px;
+  }
+
+  &__value {
+    overflow: hidden;
+    color: var(--color-text);
+    display: flex;
+    justify-items: center;
+    transition: color var(--transition-speed-medium) ease-in-out;
+    opacity: .6;
+  }
+
   &:hover {
-    --fr1: 1fr;
-    --fr2: 1fr;
+    --eu: 1fr;
+    --ru: 1fr;
     --color-text: var(--white-color);
 
     background-color: var(--black-color);
-    color: var(--white-color);
   }
 }

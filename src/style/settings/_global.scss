@@ -13,10 +13,15 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-img {
+img,
+video {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+a {
+  text-decoration-color: transparent;
 }
 
 [data-dropdown] {
@@ -44,10 +49,6 @@ img {
     transition: transform var(--transition-speed-medium) ease-in-out;
     transform: rotateX(var(--svg-rotate, 0));
   }
-
-  @media (hover: hover) {
-    &:hover {}
-  }
 }
 
 
@@ -55,4 +56,10 @@ dl,
 dt,
 dd {
   margin: 0;
+}
+
+
+[data-price-value]::after {
+  content: ' р.';
+  font-weight: 400;
 }

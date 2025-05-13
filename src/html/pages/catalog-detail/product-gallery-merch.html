@@ -1,0 +1,90 @@
+<div class="gallery product-gallery"
+     id="detail-gallery">
+
+  <div class="gallery__top">
+    <div class="slider swiper gallery__slider">
+
+      <div class="swiper-wrapper">
+
+        @include('../../common/gallery-slide.html', {class: 'product-gallery__slide', img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-slide.html', {class: 'product-gallery__slide', img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-slide.html', {class: 'product-gallery__slide', img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-slide.html', {class: 'product-gallery__slide', img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-slide.html', {class: 'product-gallery__slide', img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-slide.html', {class: 'product-gallery__slide', img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-slide.html', {class: 'product-gallery__slide', img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-slide.html', {class: 'product-gallery__slide', img: './img/catalog/@img.png', alt: '@alt' })
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="gallery__bottom">
+    <div class="slider swiper gallery__thumb-slider">
+
+      <div class="swiper-wrapper">
+
+        @include('../../common/gallery-thumb.html', { img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-thumb.html', { img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-thumb.html', { img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-thumb.html', { img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-thumb.html', { img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-thumb.html', { img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-thumb.html', { img: './img/catalog/@img.png', alt: '@alt' })
+
+        @include('../../common/gallery-thumb.html', { img: './img/catalog/@img.png', alt: '@alt' })
+      </div>
+
+    </div>
+
+    <div class="gallery__controls">
+      <button class="btn-nav prev"
+              data-to-slide="prev"
+              aria-label="Предыдущая страница"
+              title="Предыдущая страница">
+        <svg width="2"
+             height="22"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#slider-line"></use>
+        </svg>
+        <svg width="11"
+             height="30"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#slider-arrow-left"></use>
+        </svg>
+      </button>
+
+      <button class="btn-nav next"
+              data-to-slide="next"
+              aria-label="Следующая страница"
+              title="Следующая страница">
+        <svg width="2"
+             height="22"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#slider-line"></use>
+        </svg>
+        <svg width="11"
+             height="30"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#slider-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</div>

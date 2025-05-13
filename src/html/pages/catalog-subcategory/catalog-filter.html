@@ -1,0 +1,156 @@
+<form class="catalog-filter">
+  <div class="catalog-filter__title">
+    Фильтр:
+  </div>
+  <fieldset class="catalog-filter__item">
+    <legend class="mb-1">Цена</legend>
+    <div class="d-flex"
+         data-stepper-range>
+      <div class="stepper stepper--min mr-2">
+        <label class="stepper__field">
+          <input class="stepper__input"
+                 type="number"
+                 name="Минимальный объем"
+                 aria-label="Минимальный объем"
+                 value="30"
+                 autocomplete="off">
+        </label>
+        <div class="stepper__btns">
+          <button class="stepper__btn stepper__btn--up"
+                  aria-label="Увеличить"
+                  title="Увеличить"
+                  type="button">
+            <svg width="13"
+                 height="6"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#stepper-up"></use>
+            </svg>
+          </button>
+
+          <button class="stepper__btn stepper__btn--down"
+                  aria-label="Уменьшить"
+                  title="Уменьшить"
+                  type="button">
+            <svg width="13"
+                 height="6"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#stepper-down"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="stepper stepper--max">
+        <label class="stepper__field">
+          <input class="stepper__input"
+                 type="number"
+                 aria-label="Максимальный объем"
+                 name="Максимальный объем"
+                 value="1000"
+                 autocomplete="off">
+        </label>
+        <div class="stepper__btns">
+          <button class="stepper__btn stepper__btn--up"
+                  aria-label="Увеличить"
+                  type="button">
+            <svg width="13"
+                 height="6"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#stepper-up"></use>
+            </svg>
+          </button>
+
+          <button class="stepper__btn stepper__btn--down"
+                  aria-label="Уменьшить"
+                  type="button">
+            <svg width="13"
+                 height="6"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#stepper-down"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </fieldset>
+  <fieldset class="catalog-filter__item">
+    <details data-dropdown
+             class="catalog-filter__dropdown">
+      <summary class="pb-1">
+        <legend>Жанры</legend>
+        <svg width="17"
+             height="7"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#arrow-dropdown"></use>
+        </svg>
+      </summary>
+      <div class="catalog-filter__checkboxes">
+        <label class="catalog-filter__checkbox">
+          <input class="visually-hidden"
+                 type="checkbox"
+                 name="genres">
+          <span>АбстракцияАнимализм</span>
+        </label>
+        <label class="catalog-filter__checkbox">
+          <input class="visually-hidden"
+                 type="checkbox"
+                 name="genres">
+          <span>Городской пейзаж</span>
+        </label>
+        <label class="catalog-filter__checkbox">
+          <input class="visually-hidden"
+                 type="checkbox"
+                 name="genres">
+          <span>Декоратив</span>
+        </label>
+        <label class="catalog-filter__checkbox">
+          <input class="visually-hidden"
+                 type="checkbox"
+                 name="genres">
+          <span>Исторический жанр</span>
+        </label>
+      </div>
+    </details>
+  </fieldset>
+  <fieldset class="catalog-filter__item">
+    <details data-dropdown
+             class="catalog-filter__dropdown">
+      <summary class="pb-1">
+        <legend>Художники</legend>
+        <svg width="17"
+             height="7"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#arrow-dropdown"></use>
+        </svg>
+      </summary>
+      <div class="catalog-filter__checkboxes">
+        <label class="catalog-filter__checkbox">
+          <input class="visually-hidden"
+                 type="checkbox"
+                 name="artist">
+          <span>АбстракцияАнимализм</span>
+        </label>
+        <label class="catalog-filter__checkbox">
+          <input class="visually-hidden"
+                 type="checkbox"
+                 name="artist">
+          <span>Городской пейзаж</span>
+        </label>
+        <label class="catalog-filter__checkbox">
+          <input class="visually-hidden"
+                 type="checkbox"
+                 name="artist">
+          <span>Декоратив</span>
+        </label>
+        <label class="catalog-filter__checkbox">
+          <input class="visually-hidden"
+                 type="checkbox"
+                 name="artist">
+          <span>Исторический жанр</span>
+        </label>
+      </div>
+    </details>
+  </fieldset>
+</form>

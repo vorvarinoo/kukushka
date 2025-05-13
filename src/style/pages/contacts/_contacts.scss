@@ -1,0 +1,40 @@
+.contacts {
+  &__wrap {
+    padding-bottom: 48px;
+
+    @include media-min($xl) {
+      padding-bottom: 96px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    color: var(--gray-70-color);
+    line-height: 1.1;
+    word-spacing: 100vw;
+
+    @include media-max($lg) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    color: var(--gray-70-color);
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    gap: 16px 30px;
+
+    @include media-min($md) {
+      grid-template-columns: min-content;
+    }
+
+    & li {
+      display: inline-flex;
+    }
+  }
+}
