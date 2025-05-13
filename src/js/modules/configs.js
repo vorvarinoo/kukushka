@@ -34,6 +34,14 @@ const sliderConfig = {
       nextEl: '#detail-gallery [data-to-slide="next"]',
     },
   },
+  detailArtist: {
+    slidesPerView: 1,
+    watchSlidesProgress: true,
+    navigation: {
+      prevEl: '#detail-gallery [data-to-slide="prev"]',
+      nextEl: '#detail-gallery [data-to-slide="next"]',
+    },
+  },
   detailThumbs: {
     slidesPerView: 5,
     spaceBetween: 8,
