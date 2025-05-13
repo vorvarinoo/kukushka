@@ -7,10 +7,14 @@ import {
   sendData,
 } from './utils.js';
 
+import {
+  simpleModal,
+} from './modal.js';
+
 const justValidateConfig = validateConfig.justValidate;
 
 const isSendOk = () => {
-  return;
+  simpleModal.open( '#send-ok-modal' );
 };
 
 const isSendError = ( target ) => {
@@ -82,6 +86,27 @@ export const validateForms = () => {
               errorMessage: 'Длина сообщения превышает 200 символов',
             },
           ] );
+          break;
+        case 'country':
+          validationRules.addField( `${formID} [data-validate="country"]`, [ {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Поле обязательно для заполнения',
+          } ] );
+          break;
+        case 'city':
+          validationRules.addField( `${formID} [data-validate="city"]`, [ {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Поле обязательно для заполнения',
+          } ] );
+          break;
+        case 'street':
+          validationRules.addField( `${formID} [data-validate="street"]`, [ {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Поле обязательно для заполнения',
+          } ] );
           break;
         case 'confirm':
           validationRules.addField( `${formID} [data-validate="confirm"]`, [ {

@@ -73,8 +73,8 @@
         <input class="checkout-field__input"
                type="text"
                name="Страна"
-               placeholder="Введите ваше Имя"
-               data-validate="email"
+               placeholder="Введите вашу Страну"
+               data-validate="country"
                required>
       </label>
 
@@ -86,8 +86,8 @@
         <input class="checkout-field__input"
                type="text"
                name="Город"
-               placeholder="Введите ваше Имя"
-               data-validate="email"
+               placeholder="Введите ваш Город"
+               data-validate="city"
                required>
       </label>
 
@@ -99,8 +99,8 @@
         <input class="checkout-field__input"
                type="text"
                name="Улица"
-               placeholder="Введите ваше Имя"
-               data-validate="email"
+               placeholder="Введите вашу Улицу"
+               data-validate="street"
                required>
       </label>
 
@@ -122,7 +122,8 @@
   <fieldset class="checkout-group">
     <legend class="t2 checkout-group__title">3. Выберите способ оплаты</legend>
     <div class="checkout-group__cont">
-      <div class="checkout-group__payment-method">
+      <div class="checkout-group__payment-method"
+           name="payment">
         <label class="checkout-field checkout-field--row form-radio">
           <input type="radio"
                  name="payment-method">

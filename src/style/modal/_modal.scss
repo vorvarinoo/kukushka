@@ -6,6 +6,8 @@
   background-color: #FFFFFF;
   min-width: 360px;
   max-width: 1590px;
+  padding: 48px 24px 24px;
+  text-align: center;
 
   &__close {
     @include btn-reset;
@@ -25,5 +27,19 @@
 
   @include media-max(calc(var(--min-site-width) - 1px)) {
     min-width: auto;
+  }
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    color: var(--gray-50-color);
+    margin-bottom: 32px;
+
+    @include media-min($fhd) {
+      margin-bottom: 48px;
+    }
   }
 }
